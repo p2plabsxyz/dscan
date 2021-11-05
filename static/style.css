@@ -1,0 +1,109 @@
+html, body {
+    height: 600px;
+    width: 400px;
+    font-family: arial;
+}
+
+.gif {
+    width: 50px;
+    height: 50px;
+    margin-bottom: -15px;
+}
+
+h1 {
+    color: #449394;
+    display: inline-block;
+    margin-left: 5px;
+    cursor: default;
+}
+
+.h-line1 {
+    margin-bottom: 40px;
+}
+.h-line2 {
+    margin-top: 75px;
+    margin-bottom: 18px;
+}
+
+.label {
+    width: 200px;
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px solid #326D6E;
+    border-radius: 6px;
+    background-color: #449394;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+.label:hover{
+    background-color: lightseagreen;
+}
+
+#qrcode {
+    margin-top: 44px;
+    margin-bottom: 25px;
+}
+
+#cid, #link {
+    display: inline-flex;
+    width: 275px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: -11px;
+    margin-right: 8px;
+    border: 1px solid #449394;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+}
+
+svg {
+    display: inline-flex;
+    width: 19px;
+    height: 19px;
+    padding: 6px;
+    margin-top: 20px;
+    margin-bottom: -12px;
+    border: 1px solid #449394;
+    color: darkslategray;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+}
+svg:hover {
+    color: #449394;
+    cursor: pointer;
+}
+
+.twitter {
+    bottom: 0px;
+    height: 150px;
+    color: gray;
+    text-decoration: none;
+    font-size: 14px;
+}
+.l-twitter {
+    bottom: 0px;
+    height: 150px;
+    color: gray;
+    text-decoration: none;
+    font-size: 14px;
+}
+.twitter:hover {
+    cursor: pointer;
+    color: lightslategray;
+}
+
+/* hide scrollbar but allow scrolling */
+#cid, #link {
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+}
+#cid::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+#link::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
