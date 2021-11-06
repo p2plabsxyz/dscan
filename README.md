@@ -1,9 +1,24 @@
 <p align="center">
-    <img align="center" src="https://user-images.githubusercontent.com/68826419/140587437-d93d1079-54fb-4d48-8d8d-6331ef0d029d.png" width="150" height"400"></img>
+    <img align="center" src="/static/assets/logo.png" width="150" height"400"></img>
 </p>
 
-<h1 aign="center">DScan</h1>
+<h1 align="center">DScan</h1>
 
-<p aign="center">
-  <p aign="center">Decentralized QR code generator</p>
-</p>
+<div align="center">
+    <img src="https://img.shields.io/github/repo-size/akhileshthite/dscan" alt="repo-size">
+    <img src="https://img.shields.io/badge/Extension-DScan-purple.svg" alt="platform">
+</div>
+
+<div align="center">
+    Add extension: https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5
+</div>
+
+Compatible with ```Chrome | Firefox | Edge | Brave``` browsers.
+
+### Development setup:
+
+* Download `extension.zip` from this github repository and extract it.
+
+* Select `Developer mode` in your browser extensions.
+
+* Select `Load unpacked extension` and open the extracted folder.
