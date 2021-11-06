@@ -11,7 +11,7 @@
 
 <div align="center">
     Compatible with Chrome | Firefox | Edge | Brave browsers
-</div>
+</div><br>
 
 **Add extension:** [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5)
 
