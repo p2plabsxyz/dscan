@@ -21,23 +21,28 @@ h1 {
     margin-bottom: 40px;
 }
 .h-line2 {
-    margin-top: 75px;
+    margin-top: 85px;
     margin-bottom: 18px;
 }
 
 .label {
-    width: 200px;
+    width: 250px;
     padding: 10px;
     margin-top: 20px;
     border: 2px solid #326D6E;
     border-radius: 6px;
     background-color: #449394;
+    font-size: large;
     color: white;
     text-align: center;
     cursor: pointer;
 }
 .label:hover{
     background-color: lightseagreen;
+}
+
+.input-label {
+    font-size: large;
 }
 
 #qrcode {
@@ -47,11 +52,12 @@ h1 {
 
 #cid, #link {
     display: inline-flex;
-    width: 275px;
+    width: 250px;
     height: 30px;
     margin-top: 20px;
     margin-bottom: -11px;
     margin-right: 8px;
+    font-size: medium;
     border: 1px solid #449394;
     border-radius: 5px;
     text-align: center;
@@ -65,6 +71,7 @@ svg {
     padding: 6px;
     margin-top: 20px;
     margin-bottom: -12px;
+    margin-right: 14px;
     border: 1px solid #449394;
     color: darkslategray;
     border-radius: 5px;
@@ -77,14 +84,12 @@ svg:hover {
 }
 
 .twitter {
-    bottom: 0px;
     height: 150px;
     color: gray;
     text-decoration: none;
     font-size: 14px;
 }
 .l-twitter {
-    bottom: 0px;
     height: 150px;
     color: gray;
     text-decoration: none;
@@ -106,4 +111,15 @@ svg:hover {
 }
 #link::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
