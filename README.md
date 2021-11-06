@@ -9,11 +9,11 @@
     <img src="https://img.shields.io/badge/Extension-DScan-green.svg" alt="platform">
 </div>
 
-<p align="center">
-    Compatible with ```Chrome | Firefox | Edge | Brave``` browsers.
-</p>
+<div align="center">
+    Compatible with Chrome | Firefox | Edge | Brave browsers
+</div>
 
-Add extension: [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5)
+**Add extension:** [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5)
 
 
 ### Development setup:
