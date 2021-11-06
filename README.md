@@ -10,7 +10,7 @@
 </div>
 
 <div align="center">
-    Add extension: https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5
+    Add extension: [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5)
 </div>
 
 Compatible with ```Chrome | Firefox | Edge | Brave``` browsers.
