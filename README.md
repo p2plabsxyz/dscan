@@ -6,14 +6,14 @@
 
 <div align="center">
     <img src="https://img.shields.io/github/repo-size/akhileshthite/dscan" alt="repo-size">
-    <img src="https://img.shields.io/badge/Extension-DScan-green.svg" alt="platform">
+    <img src="https://img.shields.io/badge/Extension-DScan-color=1FC71F.svg" alt="platform">
 </div>
 
 <div align="center">
     Compatible with Chrome | Firefox | Edge | Brave browsers
 </div><br>
 
-**Add extension:** [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap?utm_source=googleads&utm_medium=adgroup5&utm_campaign=adgroup5&utm_id=adgroup5)
+**Add extension:** [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)
 
 
 ### Development setup:
