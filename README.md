@@ -13,7 +13,10 @@
     Compatible with Chrome | Firefox | Edge | Brave browsers
 </div><br>
 
-**Add extension:** [Chrome web store link](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)
+### Add extension:
+* `Chrome`: [Chrome web store](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)
+* `Brave`: [Chrome web store](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)
+* `Firefox`: [Firefox add-ons](https://addons.mozilla.org/en-US/firefox/addon/dscan/)
 
 
 ### Development setup:
