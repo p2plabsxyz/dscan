@@ -4,7 +4,6 @@ resolves #`issueNumber`
 
 ## Checklist
 
-- [ ] Name the PR `Add <your-username>`
 - [ ] You've followed the code structure 
 - [ ] You've linked the PR to correct Issue
 

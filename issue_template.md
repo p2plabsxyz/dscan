@@ -1,5 +1,4 @@
 title: Your-Name-Here
-type: 
 
 ---
 
