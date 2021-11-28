@@ -1,125 +1,140 @@
-html, body {
-    height: 600px;
-    width: 400px;
-    font-family: arial;
+html,
+body {
+  height: 600px;
+  width: 400px;
+  font-family: arial;
+  background-color: #F1F2F8;
 }
-
-.gif {
-    width: 50px;
-    height: 50px;
-    margin-bottom: -15px;
-}
-
-h1 {
-    color: #449394;
-    display: inline-block;
-    margin-left: 5px;
-    cursor: default;
-}
-
-.h-line1 {
-    margin-bottom: 40px;
-}
-.h-line2 {
-    margin-top: 85px;
-    margin-bottom: 18px;
-}
-
-.label {
-    width: 250px;
-    padding: 10px;
-    margin-top: 20px;
-    border: 2px solid #326D6E;
-    border-radius: 6px;
-    background-color: #449394;
-    font-size: large;
-    color: white;
+.center{
     text-align: center;
-    cursor: pointer;
-}
-.label:hover{
-    background-color: lightseagreen;
 }
 
-.input-label {
-    font-size: large;
+header {
+  background-color: #192234;
+  margin-left: -8px;
+  margin-top: -12px;
+  height: 80px;
+  margin-bottom: 45px;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: -12px;
+  margin-left: -24px;
+}
+h1 {
+  display: inline-block;
+  color: #52C0CB;
+  font-weight: lighter;
+  font-family: Helvetica;
+  font-size: xx-large;
+  margin-left: 5px;
+  cursor: default;
+}
+
+.btn-upload {
+  width: 250px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 2px solid #326d6e;
+  border-radius: 6px;
+  background-color: #449394;
+  font-size: large;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+.btn-upload:hover {
+  background-color: lightseagreen;
 }
 
 #qrcode {
-    margin-top: 44px;
-    margin-bottom: 25px;
+  margin-top: 44px;
+  margin-bottom: 25px;
 }
 
-#cid, #link {
-    display: inline-flex;
-    width: 250px;
-    height: 30px;
-    margin-top: 20px;
-    margin-bottom: -11px;
-    margin-right: 8px;
-    font-size: medium;
-    border: 1px solid #449394;
-    border-radius: 5px;
-    text-align: center;
-    align-items: center;
+.output-label {
+  font-size: large;
 }
-
+#cid,
+#link {
+  display: inline-flex;
+  background-color: white;
+  padding-left: 4px;
+  padding-right: 4px;
+  width: 250px;
+  height: 30px;
+  margin-top: 20px;
+  margin-bottom: -11px;
+  margin-right: 8px;
+  font-size: medium;
+  border: 1px solid #449394;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+}
 svg {
-    display: inline-flex;
-    width: 19px;
-    height: 19px;
-    padding: 6px;
-    margin-top: 20px;
-    margin-bottom: -12px;
-    margin-right: 14px;
-    border: 1px solid #449394;
-    color: darkslategray;
-    border-radius: 5px;
-    text-align: center;
-    align-items: center;
+  display: inline-flex;
+  background-color: white;
+  width: 19px;
+  height: 19px;
+  padding: 6px;
+  margin-top: 20px;
+  margin-bottom: -12px;
+  margin-right: 14px;
+  border: 1px solid #449394;
+  color: darkslategray;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
 }
 svg:hover {
-    color: #449394;
-    cursor: pointer;
+  color: #449394;
+  cursor: pointer;
 }
 
-.twitter {
-    height: 150px;
-    color: gray;
-    text-decoration: none;
-    font-size: 14px;
+hr {
+  margin-top: 85px;
+  margin-bottom: 18px;
+  margin-left: -8px;
 }
-.l-twitter {
-    height: 150px;
-    color: gray;
-    text-decoration: none;
-    font-size: 14px;
+.twitter {
+  height: 150px;
+  color: gray;
+  text-decoration: none;
+  font-size: 14px;
+}
+.lable-twitter {
+  height: 150px;
+  color: gray;
+  text-decoration: none;
+  font-size: 14px;
 }
 .twitter:hover {
-    cursor: pointer;
-    color: lightslategray;
+  cursor: pointer;
+  color: lightslategray;
 }
 
 /* hide scrollbar but allow scrolling */
-#cid, #link {
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
-    overflow-y: scroll; 
+#cid,
+#link {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
 }
 #cid::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+  display: none; /* for Chrome, Safari, and Opera */
 }
 #link::-webkit-scrollbar {
-    display: none; /* for Chrome, Safari, and Opera */
+  display: none; /* for Chrome, Safari, and Opera */
 }
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
-    display: none;
-  }
-  
+  display: none;
+}
+
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
