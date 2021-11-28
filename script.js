@@ -30,9 +30,9 @@ $("#upload").on("change", function () {
       const cid = result[0].hash
       let ipfsLink = `https://ipfs.infura.io/ipfs/${result[0].hash}`;
       // IPFS hash (CID)
-      document.getElementById("cid").innerHTML = cid;
+      document.getElementById("cid").textContent = cid;
       // IPFS Infura link
-      document.getElementById("link").innerHTML = ipfsLink;
+      document.getElementById("link").textContent = ipfsLink;
       $('#svg-link').on('click', function() {
         window.open(ipfsLink, '_blank').focus();
       });
