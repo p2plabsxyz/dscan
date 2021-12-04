@@ -36,6 +36,7 @@ $("#upload").on("change", function () {
       $("#svg-link").on("click", function () {
         window.open(ipfsLink, "_blank").focus();
       });
+      // Copy CID to clipboard when copy button is clicked
       $("#svg-cid").on("click", function () {
         navigator.clipboard.writeText(cid);
       });
