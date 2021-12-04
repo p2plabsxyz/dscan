@@ -42,6 +42,13 @@ $("#upload").on("change", function () {
       });
       // Generate QR code
       QR_CODE.makeCode(ipfsLink);
+			$("#svg-download").on("click", function () {
+				var qrCodeSrc = document.getElementById("qr-code-image").src;
+				var a = document.createElement("a");
+				a.href = qrCodeSrc;
+				a.download = "qr-code.png";
+				a.click();
+			})
     });
   };
   reader.readAsArrayBuffer(this.files[0]);
