@@ -42,11 +42,16 @@ $("#upload").on("change", function () {
       });
       // Generate QR code
       QR_CODE.makeCode(ipfsLink);
+			// Code to download qrcode
 			$("#svg-download").on("click", function () {
+				// Gets the base64 source of the qr code image
 				var qrCodeSrc = document.getElementById("qr-code-image").src;
 				var a = document.createElement("a");
+				// an invisible a tag is given that href.
 				a.href = qrCodeSrc;
+				// filename for the qrcode is set
 				a.download = "qr-code.png";
+				// the a tag is clicked, triggering the download
 				a.click();
 			})
     });
