@@ -27,14 +27,18 @@ $("#upload").on("change", function () {
       if (err) {
         return console.log(err);
       }
-      const cid = result[0].hash
+      const cid = result[0].hash;
       let ipfsLink = `https://ipfs.infura.io/ipfs/${result[0].hash}`;
       // IPFS hash (CID)
       document.getElementById("cid").textContent = cid;
       // IPFS Infura link
       document.getElementById("link").textContent = ipfsLink;
-      $('#svg-link').on('click', function() {
-        window.open(ipfsLink, '_blank').focus();
+      $("#svg-link").on("click", function () {
+        window.open(ipfsLink, "_blank").focus();
+      });
+      // Copy CID to clipboard when copy button is clicked
+      $("#svg-cid").on("click", function () {
+        navigator.clipboard.writeText(cid);
       });
       // Generate QR code
       QR_CODE.makeCode(ipfsLink);
