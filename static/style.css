@@ -3,10 +3,10 @@ body {
   height: 600px;
   width: 400px;
   font-family: arial;
-  background-color: #F1F2F8;
+  background-color: #f1f2f8;
 }
-.center{
-    text-align: center;
+.center {
+  text-align: center;
 }
 
 header {
@@ -14,7 +14,7 @@ header {
   margin-left: -8px;
   margin-top: -12px;
   height: 80px;
-  margin-bottom: 45px;
+  margin-bottom: 40px;
 }
 .logo {
   width: 50px;
@@ -24,7 +24,7 @@ header {
 }
 h1 {
   display: inline-block;
-  color: #52C0CB;
+  color: #52c0cb;
   font-weight: lighter;
   font-family: Helvetica;
   font-size: xx-large;
@@ -49,8 +49,13 @@ h1 {
 }
 
 #qrcode {
-  margin-top: 44px;
-  margin-bottom: 25px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+#svg-download {
+  margin-bottom: 10px;
+  margin-left: 15px;
 }
 
 .output-label {
@@ -94,8 +99,8 @@ svg:hover {
 }
 
 hr {
-  margin-top: 85px;
-  margin-bottom: 18px;
+  margin-top: 40px;
+  margin-bottom: 20px;
   margin-left: -8px;
 }
 .twitter {
