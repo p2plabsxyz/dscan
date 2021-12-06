@@ -14,7 +14,7 @@ header {
   margin-left: -8px;
   margin-top: -12px;
   height: 80px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 .logo {
   width: 50px;
@@ -49,12 +49,13 @@ h1 {
 }
 
 #qrcode {
-  margin-top: 30px;
+  margin-top: 40px;
   margin-bottom: 10px;
 }
 
 #svg-download {
   margin-bottom: 10px;
+  margin-left: 15px;
 }
 
 .output-label {
