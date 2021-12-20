@@ -6,7 +6,7 @@
 
 <div align="center">
     <img src="https://img.shields.io/github/v/release/akhileshthite/dscan?color=1FC71F" alt="GitHub release" />
-    <img src="https://img.shields.io/badge/Extension-DScan.svg" alt="platform">
+    <img src="https://img.shields.io/badge/Extension-DScan-purple.svg" alt="platform">
 </div><br>
 
 ### Add extension:
