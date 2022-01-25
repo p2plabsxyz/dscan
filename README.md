@@ -5,8 +5,9 @@
 <h1 align="center">DScan</h1>
 
 <div align="center">
-    <img src="https://img.shields.io/github/v/release/akhileshthite/dscan?color=1FC71F" alt="release version" />
-    <img src="https://img.shields.io/badge/Extension-DScan-60CACF" alt="platform">
+    <img src="https://img.shields.io/badge/Extension-DScan-2C80C1" alt="Platform" />
+    <img src="https://img.shields.io/github/v/release/akhileshthite/dscan?color=1FC71F" alt="Release version" />
+    <img src="https://img.shields.io/chrome-web-store/d/idpfgkgogjjgklefnkjdpghkifbjenap?label=Users" alt="Active users">
 </div><br>
 
 ### Add extension:
