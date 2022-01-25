@@ -6,7 +6,7 @@
 
 <div align="center">
     <img src="https://img.shields.io/github/v/release/akhileshthite/dscan?color=1FC71F" alt="release version" />
-    <img src="https://img.shields.io/badge/Extension-DScan?color=60CACF.svg" alt="platform">
+    <img src="https://img.shields.io/badge/Extension-DScan?color=60CACF" alt="platform">
 </div><br>
 
 ### 💻 Add extension:
@@ -25,6 +25,6 @@
 | ------------- | ------------- |
 
 ### ⚖️ License
-LinkFree is licensed under the MIT [License](https://github.com/AkhileshThite/dscan/blob/main/LICENSE).
+DScan is licensed under the MIT [License](https://github.com/AkhileshThite/dscan/blob/main/LICENSE).
 
 Don't forget to leave a star ⭐️
