@@ -14,6 +14,7 @@ var QR_CODE = new QRCode("qrcode", {
 });
 
 $("#upload").on("change", function () {
+  $(".loader").show(900);
   var reader = new FileReader();
   reader.onload = function () {
     var ipfs = window.IpfsHttpClient({
@@ -42,6 +43,7 @@ $("#upload").on("change", function () {
       });
       // Generate QR code
       QR_CODE.makeCode(ipfsLink);
+      $(".loader").hide();
 			// Code to download qrcode
 			$("#svg-download").on("click", function () {
 				// Gets the base64 source of the qr code image
@@ -53,6 +55,7 @@ $("#upload").on("change", function () {
 				a.download = "qr-code.png";
 				// the a tag is clicked, triggering the download
 				a.click();
+        
 			})
     });
   };

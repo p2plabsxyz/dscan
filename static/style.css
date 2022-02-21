@@ -2,6 +2,8 @@ html,
 body {
   height: 600px;
   width: 400px;
+  position: relative;
+  /* margin: 0px auto; */
   font-family: arial;
   background-color: #f1f2f8;
 }
@@ -46,6 +48,32 @@ h1 {
 }
 .btn-upload:hover {
   background-color: lightseagreen;
+}
+
+/* loader */
+.loader {
+  border: 10px solid #e0dada;
+  border-radius: 50%;
+  border-top: 10px solid #449394;
+  width: 70px;
+  height: 70px;
+  display: none;
+  position: absolute;
+  top: 210px;
+  left: 160px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #qrcode {
