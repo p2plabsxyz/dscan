@@ -55,7 +55,7 @@ $("#upload").on("change", function () {
 				a.download = "qr-code.png";
 				// the a tag is clicked, triggering the download
 				a.click();
-				
+        
 			})
     });
   };
