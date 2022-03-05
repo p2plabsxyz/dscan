@@ -14,9 +14,13 @@ body {
 header {
   background-color: #192234;
   margin-left: -8px;
-  margin-top: -12px;
-  height: 80px;
-  margin-bottom: 40px;
+  margin-top: -18px;
+  height: 75px;
+  margin-bottom: 60px;
+  /* shadow */
+  -webkit-box-shadow: 0 4px 6px -6px #222;
+  -moz-box-shadow: 0 4px 6px -6px #222;
+  box-shadow: 0 4px 6px -6px #222;
 }
 .logo {
   width: 50px;
@@ -37,9 +41,8 @@ h1 {
 .btn-upload {
   width: 250px;
   padding: 10px;
-  margin-top: 20px;
   border: 2px solid #326d6e;
-  border-radius: 6px;
+  border-radius: 8px;
   background-color: #449394;
   font-size: large;
   color: white;
@@ -59,7 +62,7 @@ h1 {
   height: 70px;
   display: none;
   position: absolute;
-  top: 210px;
+  top: 230px;
   left: 160px;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 1s linear infinite;
@@ -82,7 +85,7 @@ h1 {
 }
 
 #svg-download {
-  margin-bottom: 10px;
+  margin-bottom: 0px;
   margin-left: 15px;
 }
 
@@ -100,11 +103,15 @@ h1 {
   margin-top: 20px;
   margin-bottom: -11px;
   margin-right: 8px;
+  margin-left: 4px;
   font-size: medium;
-  border: 1px solid #449394;
+  border: 2px solid #CCCDCD;
   border-radius: 5px;
   text-align: center;
   align-items: center;
+}
+#cid:hover, #link:hover {
+  background-color: #FBFAFA;
 }
 svg {
   display: inline-flex;
@@ -115,38 +122,18 @@ svg {
   margin-top: 20px;
   margin-bottom: -12px;
   margin-right: 14px;
-  border: 1px solid #449394;
-  color: darkslategray;
+  border: 2px solid #CCCDCD;
+  color: #326D6E;
   border-radius: 5px;
   text-align: center;
   align-items: center;
 }
 svg:hover {
   color: #449394;
+  background-color: #FBFAFA;
   cursor: pointer;
 }
 
-hr {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: -8px;
-}
-.twitter {
-  height: 150px;
-  color: gray;
-  text-decoration: none;
-  font-size: 14px;
-}
-.lable-twitter {
-  height: 150px;
-  color: gray;
-  text-decoration: none;
-  font-size: 14px;
-}
-.twitter:hover {
-  cursor: pointer;
-  color: lightslategray;
-}
 
 /* hide scrollbar but allow scrolling */
 #cid,
