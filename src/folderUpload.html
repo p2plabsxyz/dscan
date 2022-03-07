@@ -8,7 +8,6 @@
     <title>DScan</title>
   </head>
   <body>
-    <div id="root"></div>
     <!-- header -->
     <section class="center">
       <header>
@@ -21,14 +20,14 @@
     </section>
     <!-- pages -->
     <section class="center pages">
-      <a class="file active" href="">File 📄</a>
-      <a class="folder" href="folderUpload.html">Folder 📁</a>
+        <a class="file" href="popup.html">File 📄</a>
+        <a class="folder active" href="">Folder 📁</a>
     </section>
     <hr>
     <!-- input -->
     <section class="center">
-      <input type="file" id="fileUpload" hidden />
-      <label for="fileUpload" class="btn-upload">Upload</label>
+      <input type="file" id="folderUpload" webkitdirectory mozdirectory multiple hidden />
+      <label for="folderUpload" class="btn-upload">Upload</label>
       <div class="loader"></div>
     </section>
     <!-- QRcode -->
