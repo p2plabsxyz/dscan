@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg?" alt="Contributions welcome">
 </div><br>
 
-DScan allows you to quickly upload images, audio, video, and any type of files (including NFTs and static websites) to [IPFS](https://ipfs.io/) and get a decentralized QR code with IPFS links. Later you can share the QR code or hosted [Infura](https://infura.io/) link with everyone for easy and decentralized file sharing.<br>
+DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/) and get a "decentralized QR code" with IPFS [CID](https://docs.ipfs.io/concepts/content-addressing/). Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
 For more information, you can read this [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
 
 ## Extension
@@ -46,7 +46,7 @@ For more information, read the [Webpack docs](https://webpack.js.org/concepts/) 
 
 ## Contribute
 * Thanks for your interest in contributing to DScan. There are many ways you can contribute to the project.
-* To start, take a few minutes to read the [contribution guide](https://github.com/buidltools/dscan/blob/main/.github/CONTRIBUTING.md).
+* To start, take a few minutes to read the "[contribution guide](https://github.com/buidltools/dscan/blob/main/.github/CONTRIBUTING.md)".
 * We look forward to your [pull requests](https://github.com/buidltools/dscan/pulls) and / or involvement in our [issues page](https://github.com/buidltools/dscan/issues).
 
 

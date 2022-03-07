@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
 const Dotenv = require('dotenv-webpack');
 
@@ -18,7 +19,7 @@ var fileExtensions = [
 
 module.exports = {
   entry: {
-    popup: "./src/js/popup.js",
+    qrcode: ["regenerator-runtime/runtime.js", "./src/js/qrcode.js"],
   },
   output: {
     path: path.resolve(__dirname, "buidl"),
@@ -42,6 +43,10 @@ module.exports = {
         use: ["style-loader", "css-loader"],
       },
       {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      {
         test: new RegExp(".(" + fileExtensions.join("|") + ")$"),
         use: ["file-loader"],
       },
@@ -52,6 +57,11 @@ module.exports = {
       template: path.join(__dirname, "src", "popup.html"),
       filename: "popup.html",
     }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "folderUpload.html"),
+      filename: "folderUpload.html",
+    }),
+    new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [{ from: "public" }],
     }),

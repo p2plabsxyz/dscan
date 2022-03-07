@@ -15,9 +15,11 @@
     "davidshimjs-qrcodejs": "0.0.2",
     "file-loader": "^6.2.0",
     "fs-extra": "^10.0.1",
+    "jquery": "^3.3.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "style-loader": "^3.3.1"
+    "style-loader": "^3.3.1",
+    "web3.storage": "^3.5.6"
   },
   "devDependencies": {
     "@babel/core": "^7.17.5",
@@ -27,6 +29,8 @@
     "copy-webpack-plugin": "^10.2.4",
     "dotenv-webpack": "^7.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "regenerator-runtime": "^0.13.9",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.2",
     "webpack-merge": "^5.8.0"
