@@ -10,8 +10,8 @@
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg?" alt="Contributions welcome">
 </div><br>
 
-DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS [CID](https://docs.ipfs.io/concepts/content-addressing/). Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
-For more information, you can read this [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
+DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS CID. Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
+For more information, you can read this 📝 [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
 
 ## Extension
 | <img src="https://unpkg.com/@browser-logos/chrome/chrome_16x16.png" width="16" height="16"> [Chrome](https://www.google.com/chrome/) \| <img src="https://unpkg.com/@browser-logos/brave/brave_16x16.png" width="16" height="16"> [Brave](https://brave.com/) \| <img src="https://unpkg.com/@browser-logos/opera/opera_16x16.png" width="16" height="16"> [Opera](https://www.opera.com/)  \| <img src="https://unpkg.com/@browser-logos/edge/edge_16x16.png" width="16" height="16"> [Edge](https://www.microsoftedgeinsider.com/) |
