@@ -10,7 +10,7 @@
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg?" alt="Contributions welcome">
 </div><br>
 
-DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/) and get a "decentralized QR code" with IPFS [CID](https://docs.ipfs.io/concepts/content-addressing/). Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
+DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS [CID](https://docs.ipfs.io/concepts/content-addressing/). Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
 For more information, you can read this [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
 
 ## Extension
@@ -28,13 +28,20 @@ The extension's development code is placed in `/src` folder. manifest.json is in
 npm install
 ```
 
+For development and testing, you have to create your own web3.storage API token. To do that, `login to` [web3.storage](https://web3.storage/) -> `create a new API token` -> `copy the API token`.
+
+Then create a `.env` file in the root directory.
+```bash
+API_TOKEN=PASTE_YOUR_API_TOKEN
+```
+
 2. After development of the extension, run the following command. This will create a `production` build.
 
 ```bash
 npm run build
 ```
 
-3. Now, the `buidl` will appear in the root directory.
+3. Now, the `buidl` folder will appear in the root directory.
 
 4. Select `Developer mode` in your browser extensions tab.
 
