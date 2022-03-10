@@ -16,6 +16,7 @@ var QR_CODE = new QRCode("qrcode", {
 // web3.storage API token
 const token = process.env.API_TOKEN;
 const client = new Web3Storage({ token });
+let isTooltipVisible = false;
 
 function hideLoader(callback) {
   $(".loader").hide(function () {
@@ -29,6 +30,19 @@ function showLoader() {
   $("section.flex-center > svg").css("aria-disabled", true);
   $("#qrcode img").css("display", "none");
   $(".output-label + div").text("");
+}
+
+function showCopiedTooltip() {
+  if (!isTooltipVisible) {
+    $("#tooltip").css("display", "block");
+    $("#tooltip-pointer").css("display", "block");
+    isTooltipVisible = true;
+    setTimeout(function () {
+      $("#tooltip").css("display", "none");
+      $("#tooltip-pointer").css("display", "none");
+      isTooltipVisible = false;
+    }, 1000);
+  }
 }
 
 function uploadCallback(cid, ipfsLink) {
@@ -45,6 +59,7 @@ function uploadCallback(cid, ipfsLink) {
   $("#svg-cid")
     .off()
     .on("click", function () {
+      showCopiedTooltip();
       navigator.clipboard.writeText(cid);
     });
   // Generate QR code
