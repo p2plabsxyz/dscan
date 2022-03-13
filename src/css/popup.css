@@ -181,20 +181,22 @@ hr {
 
 #tooltip {
   border: 0.2rem solid #cccdcd;
-  border-radius: 0.2rem;
+  border-radius: 5px;
   color: #326d6e;
   background-color: #ffffff;
   display: none;
   position: absolute;
   padding: 0.5rem;
   height: 18px;
-  width: 80px;
-  left: 275px;
-  top: 421px;
+  width: 70px;
+  left: 285px;
+  top: 423px;
   z-index: 5;
 }
 
-#tooltip > strong {
+#tooltip > div:nth-child(1) {
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 2px;
   font-size: 1rem;
 }
 
