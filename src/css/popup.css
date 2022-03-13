@@ -61,11 +61,6 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.file:active {
-  box-shadow: 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px;
-  top: 2px;
-  left: 5px;
-}
 @media (min-width: 768px) {
   .file {
     padding: 0.25em 0.75em;
@@ -91,11 +86,6 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-}
-.folder:active {
-  box-shadow: 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px;
-  top: 2px;
-  left: 5px;
 }
 @media (min-width: 768px) {
   .folder {
