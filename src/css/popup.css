@@ -92,8 +92,9 @@ h1 {
     padding: 0.25em 0.75em;
   }
 }
-.active{
-  box-shadow: 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px;
+.active {
+  box-shadow: 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px, 1px 1px 0px 0px,
+    1px 1px 0px 0px;
   top: 2px;
   left: 5px;
 }
@@ -226,20 +227,20 @@ hr {
   margin-right: 8px;
   margin-left: 4px;
   font-size: medium;
-  border: 2px solid #cccdcd;
+  border: 2px solid #c3c0c0;
   border-radius: 5px;
   text-align: center;
   align-items: center;
   -webkit-box-shadow: 0 2px 6px -6px #222;
   -moz-box-shadow: 0 2px 6px -6px #222;
   box-shadow: 0 2px 6px -6px #222;
-  user-select:text;
+  user-select: text;
   -webkit-user-select: text;
   touch-action: manipulation;
 }
 #cid:hover,
 #link:hover {
-  background-color: #fbfafa;
+  border-color: #cccdcd;
 }
 svg {
   display: inline-flex;
@@ -250,7 +251,7 @@ svg {
   margin-top: 20px;
   margin-bottom: -12px;
   margin-right: 14px;
-  border: 2px solid #cccdcd;
+  border: 2px solid #c3c0c0;
   color: #326d6e;
   border-radius: 5px;
   text-align: center;
@@ -261,7 +262,7 @@ svg {
 }
 svg:hover {
   color: #175859;
-  background-color: #fbfafa;
+  border-color: #cccdcd;
   cursor: pointer;
 }
 
