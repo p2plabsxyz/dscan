@@ -229,6 +229,8 @@ hr {
   font-size: medium;
   border: 2px solid #c3c0c0;
   border-radius: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   text-align: center;
   align-items: center;
   -webkit-box-shadow: 0 2px 6px -6px #222;
