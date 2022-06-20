@@ -4,14 +4,19 @@ import $ from "jquery";
 import { Web3Storage } from "web3.storage";
 import "regenerator-runtime/runtime";
 
+const createQRCodeFor = (identifier, dimension) => {
+  return new QRCode(identifier, {
+    width: dimension,
+    height: dimension,
+    colorDark: "#000000",
+    colorLight: "#ffffff",
+    correctLevel: QRCode.CorrectLevel.L,
+  });
+}
+
 // QR code js library
-var QR_CODE = new QRCode("qrcode", {
-  width: 150,
-  height: 150,
-  colorDark: "#000000",
-  colorLight: "#ffffff",
-  correctLevel: QRCode.CorrectLevel.L,
-});
+var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
+var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
 
 // web3.storage API token
 const token = process.env.API_TOKEN;
@@ -63,13 +68,14 @@ function uploadCallback(cid, ipfsLink) {
       navigator.clipboard.writeText(cid);
     });
   // Generate QR code
-  QR_CODE.makeCode(ipfsLink);
+  QR_CODE_DOWNLOAD.makeCode(ipfsLink);
+  QR_CODE_DISPLAY.makeCode(ipfsLink);
   // Code to download qrcode
   $("#svg-download")
     .off()
     .on("click", function () {
       // gets the base64 source of the qr code image
-      var qrCodeSrc = document.querySelector("#qrcode img").src;
+      var qrCodeSrc = document.querySelector("#qrcode-download img").src;
       var a = document.createElement("a");
       // an invisible a tag is given that href.
       a.href = qrCodeSrc;
@@ -93,7 +99,7 @@ $("#fileUpload").on("change", async function () {
     uploadCallback(cid, ipfsLink);
   });
 });
-QR_CODE.clear();
+QR_CODE_DISPLAY.clear();
 
 // Generate decentralized QR code from folder
 $("#folderUpload").on("change", async function () {
@@ -105,4 +111,4 @@ $("#folderUpload").on("change", async function () {
     uploadCallback(cid, ipfsLink);
   });
 });
-QR_CODE.clear();
+QR_CODE_DISPLAY.clear();
