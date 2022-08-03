@@ -4,6 +4,7 @@ import $ from "jquery";
 import { Web3Storage } from "web3.storage";
 import "regenerator-runtime/runtime";
 
+// QR code js library
 const createQRCodeFor = (identifier, dimension) => {
   return new QRCode(identifier, {
     width: dimension,
@@ -14,7 +15,6 @@ const createQRCodeFor = (identifier, dimension) => {
   });
 }
 
-// QR code js library
 var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
 
