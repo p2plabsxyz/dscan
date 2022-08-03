@@ -15,7 +15,7 @@
 
 ## Commits
 
-* Learn more about conventional commits [here](https://www.conventionalcommits.org/en/v1.0.0/).
+* Your commit messages "should" follow the conventional commits guidelines. Learn more about it [here](https://www.conventionalcommits.org/en/v1.0.0/).
 
 ## Code Style
 
