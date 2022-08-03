@@ -170,6 +170,13 @@ hr {
   margin-bottom: 5px;
 }
 
+#qrcode-download {
+  display: none; 
+}
+#qrcode-download > * {
+  display: none;
+}
+
 #tooltip {
   border: 0.2rem solid #cccdcd;
   border-radius: 5px;
