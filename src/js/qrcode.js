@@ -94,7 +94,7 @@ $("#fileUpload").on("change", async function () {
   var files = fileUpload.files;
   var name = files[0].name;
   var cid = await client.put(files);
-  let ipfsLink = `https://ipfs.infura.io/ipfs/${cid}/${name}/`;
+  let ipfsLink = `https://dweb.link/ipfs/${cid}/${name}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
   });
@@ -106,7 +106,7 @@ $("#folderUpload").on("change", async function () {
   showLoader();
   var files = folderUpload.files;
   var cid = await client.put(files);
-  let ipfsLink = `https://ipfs.infura.io/ipfs/${cid}/`;
+  let ipfsLink = `https://dweb.link/ipfs/${cid}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
   });
