@@ -5,7 +5,8 @@
   "main": "popup.jsx",
   "scripts": {
     "dev": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "buildFF": "webpack --config webpack.prodFF.js"
   },
   "keywords": [],
   "author": "Akhilesh Thite",

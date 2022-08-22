@@ -1,11 +1,11 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "DScan: Decentralized QR code generator",
   "description": "DScan is a chrome extension that uploads the content to IPFS and generates decentralized QR codes.",
   "version": "2.3",
   "author": "BUIDL Tools",
   "homepage_url": "https://buidltools.com/",
-  "action": {
+  "browser_action": {
     "default_popup": "popup.html",
     "default_icon": "./logo.png"
   }
