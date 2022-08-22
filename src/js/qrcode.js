@@ -13,7 +13,7 @@ const createQRCodeFor = (identifier, dimension) => {
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.L,
   });
-}
+};
 
 var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
