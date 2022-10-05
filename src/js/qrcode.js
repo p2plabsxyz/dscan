@@ -13,7 +13,7 @@ const createQRCodeFor = (identifier, dimension) => {
     colorLight: "#ffffff",
     correctLevel: QRCode.CorrectLevel.L,
   });
-}
+};
 
 var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
@@ -90,7 +90,7 @@ function uploadCallback(cid, ipfsLink) {
 }
 
 function getTotalBytes(files) {
-  return files.map(file => file.size).reduce((a, b) => a + b, 0);
+  return files.map((file) => file.size).reduce((a, b) => a + b, 0);
 }
 
 function updateProgress(percent) {
@@ -107,9 +107,9 @@ function getProgressUpdater(files) {
   // returns a function that will update the progress at each call
   return (bytes) => {
     uploadedBytes += bytes;
-    var percent = totalBytes ? 100*uploadedBytes/totalBytes : 100;
+    var percent = totalBytes ? (100 * uploadedBytes) / totalBytes : 100;
     updateProgress(percent);
-  }
+  };
 }
 
 // Generate decentralized QR code from file
@@ -117,7 +117,9 @@ $("#fileUpload").on("change", async function () {
   showLoader();
   var files = fileUpload.files;
   var name = files[0].name;
-  var cid = await client.put(files, { onStoredChunk: getProgressUpdater(files) });
+  var cid = await client.put(files, {
+    onStoredChunk: getProgressUpdater(files),
+  });
   let ipfsLink = `https://w3s.link/ipfs/${cid}/${name}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
@@ -129,7 +131,9 @@ QR_CODE_DISPLAY.clear();
 $("#folderUpload").on("change", async function () {
   showLoader();
   var files = folderUpload.files;
-  var cid = await client.put(files, { onStoredChunk: getProgressUpdater(files) });
+  var cid = await client.put(files, {
+    onStoredChunk: getProgressUpdater(files),
+  });
   let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
