@@ -120,7 +120,7 @@ $("#fileUpload").on("change", async function () {
   var cid = await client.put(files, {
     onStoredChunk: getProgressUpdater(files),
   });
-  let ipfsLink = `https://w3s.link/ipfs/${cid}/${name}/`;
+  let ipfsLink = `https://dweb.link/ipfs/${cid}/${name}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
   });
@@ -134,7 +134,7 @@ $("#folderUpload").on("change", async function () {
   var cid = await client.put(files, {
     onStoredChunk: getProgressUpdater(files),
   });
-  let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
+  let ipfsLink = `https://dweb.link/ipfs/${cid}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
   });
