@@ -24,16 +24,16 @@ const client = new Web3Storage({ token });
 let isTooltipVisible = false;
 
 function hideLoader(callback) {
-  $(".loader").hide(function () {
+  $(".loader-container").hide(function () {
     $("section.flex-center > svg").css("aria-disabled", false);
     if (callback && typeof callback === "function") callback();
   });
 }
 
 function showLoader() {
-  $(".loader").show(900);
+  $(".loader-container").show(900);
   $("section.flex-center > svg").css("aria-disabled", true);
-  $("#qrcode img").css("display", "none");
+  $("#qrcode").hide();
   $(".output-label + div").text("");
 }
 
@@ -70,6 +70,7 @@ function uploadCallback(cid, ipfsLink) {
   // Generate QR code
   QR_CODE_DOWNLOAD.makeCode(ipfsLink);
   QR_CODE_DISPLAY.makeCode(ipfsLink);
+  $("#qrcode").show();
   // Code to download qrcode
   $("#svg-download")
     .off()
@@ -88,12 +89,35 @@ function uploadCallback(cid, ipfsLink) {
     });
 }
 
+function getTotalBytes(files) {
+  return files.map(file => file.size).reduce((a, b) => a + b, 0);
+}
+
+function updateProgress(percent) {
+  $(".loader-progress").html(`${percent.toFixed()}%`);
+}
+
+function getProgressUpdater(files) {
+  var files = files ? Array.from(files) : [];
+  var totalBytes = getTotalBytes(files);
+  var uploadedBytes = 0;
+
+  updateProgress(0);
+
+  // returns a function that will update the progress at each call
+  return (bytes) => {
+    uploadedBytes += bytes;
+    var percent = totalBytes ? 100*uploadedBytes/totalBytes : 100;
+    updateProgress(percent);
+  }
+}
+
 // Generate decentralized QR code from file
 $("#fileUpload").on("change", async function () {
   showLoader();
   var files = fileUpload.files;
   var name = files[0].name;
-  var cid = await client.put(files);
+  var cid = await client.put(files, { onStoredChunk: getProgressUpdater(files) });
   let ipfsLink = `https://w3s.link/ipfs/${cid}/${name}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
@@ -105,7 +129,7 @@ QR_CODE_DISPLAY.clear();
 $("#folderUpload").on("change", async function () {
   showLoader();
   var files = folderUpload.files;
-  var cid = await client.put(files);
+  var cid = await client.put(files, { onStoredChunk: getProgressUpdater(files) });
   let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
