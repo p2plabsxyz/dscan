@@ -14,17 +14,19 @@ DScan is a decentralized storage and file sharing tool.
 DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS CID. Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
 For more information, you can read this 📝 [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
 
-## Extension
+## 💻 Extension
 
 | <img src="https://unpkg.com/@browser-logos/chrome/chrome_16x16.png" width="16" height="16"> [Chrome](https://www.google.com/chrome/) \| <img src="https://unpkg.com/@browser-logos/brave/brave_16x16.png" width="16" height="16"> [Brave](https://brave.com/) \| <img src="https://unpkg.com/@browser-logos/opera/opera_16x16.png" width="16" height="16"> [Opera](https://www.opera.com/) \| <img src="https://unpkg.com/@browser-logos/edge/edge_16x16.png" width="16" height="16"> [Edge](https://www.microsoftedgeinsider.com/) |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Install from Chrome Store](https://ipfs.io/ipfs/QmU4Qm5YEKy5yHmdAgU2fD7PjZLgrYTUUbxTydqG2QK3TT)<br>![](https://img.shields.io/chrome-web-store/users/idpfgkgogjjgklefnkjdpghkifbjenap?label=Chrome%20Web%20Store%20users&style=social)](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)                                                                                                                                                                                    |
 
-## Demo
+## 📺 Demo
 
 <img src="https://github.com/buidltools/dscan/blob/main/demo.gif" />
 
-## Development
+> In case of ⚠️ "504 Gateway Time-out" error, try again after some time. You can also use other [IPFS gateways](https://ipfs.github.io/public-gateway-checker/) with your CID.
+
+## 🛠 Development
 
 The extension's development code is placed in `/src` folder. manifest.json is in `/public` folder. For webpack settings, follow the `webpack.config.js` file.
 
@@ -58,19 +60,19 @@ _After every change, run `npm run build` command and it will update `buidl` fold
 
 For more information, read the [Webpack docs](https://webpack.js.org/concepts/) and the [Chrome Extension docs](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
 
-## Contribute
+## 📄 Contribute
 
 - Thanks for your interest in contributing to DScan. There are many ways you can contribute to the project.
 - To start, take a few minutes to read the "[contribution guide](https://github.com/buidltools/dscan/blob/main/.github/CONTRIBUTING.md)".
 - We look forward to your [pull requests](https://github.com/buidltools/dscan/pulls) and / or involvement in our [issues page](https://github.com/buidltools/dscan/issues).
 
-### Thanks to all contributors!
+### 🙏 Thanks to all contributors!
 
 <a href="https://github.com/buidltools/dscan/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=buidltools/dscan" />
 </a>
 
-## License
+## ⚖️ License
 
 DScan is licensed under the [MIT License](https://github.com/buidltools/dscan/blob/main/LICENSE).
 
