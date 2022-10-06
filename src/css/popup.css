@@ -141,8 +141,8 @@ hr {
 .loader {
   display: flex;
   height: inherit;
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .loader > div {
@@ -155,13 +155,13 @@ hr {
 }
 
 .loader-spinner {
-	border: 10px solid #e0dada;
-	border-radius: 50%;
-	border-top: 10px solid #449394;
-	width: 70px;
-	height: 70px;
-	-webkit-animation: spin 2s linear infinite;
-	animation: spin 1s linear infinite;
+  border: 10px solid #e0dada;
+  border-radius: 50%;
+  border-top: 10px solid #449394;
+  width: 70px;
+  height: 70px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 1s linear infinite;
 }
 
 @-webkit-keyframes spin {
@@ -237,7 +237,8 @@ hr {
 }
 
 .output-label {
-  font-size: large;
+  font-family: monospace;
+  font-size: x-large;
 }
 #cid,
 #link {

@@ -116,11 +116,11 @@ function getProgressUpdater(files) {
 $("#fileUpload").on("change", async function () {
   showLoader();
   var files = fileUpload.files;
-  var name = files[0].name;
   var cid = await client.put(files, {
     onStoredChunk: getProgressUpdater(files),
+    wrapWithDirectory: false,
   });
-  let ipfsLink = `https://dweb.link/ipfs/${cid}/${name}/`;
+  let ipfsLink = `https://dweb.link/ipfs/${cid}/`;
   hideLoader(function () {
     uploadCallback(cid, ipfsLink);
   });
