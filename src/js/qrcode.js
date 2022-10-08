@@ -20,8 +20,8 @@ const body = document.querySelector('body');
 toggle.addEventListener('click', function(){
   this.classList.toggle('bi-moon');
   if(this.classList.toggle('bi-brightness-high-fill')){
-  document.documentElement.style.backgroundColor = 'white';  
-  document.body.style.backgroundColor = 'white'; 
+  document.documentElement.style.backgroundColor = '#f1f2f8';  
+  document.body.style.backgroundColor = '#f1f2f8'; 
 }
 else{
   document.documentElement.style.backgroundColor = '#222';  
