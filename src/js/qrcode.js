@@ -14,6 +14,13 @@ const createQRCodeFor = (identifier, dimension) => {
     correctLevel: QRCode.CorrectLevel.L,
   });
 };
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+  this.classList.toggle('bi-moon');
+  document.body.style.background = '#222';  
+})
 
 var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
