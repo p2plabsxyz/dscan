@@ -26,14 +26,7 @@
     <hr />
     <!-- input -->
     <section class="center">
-      <input
-        type="file"
-        id="folderUpload"
-        webkitdirectory
-        mozdirectory
-        multiple
-        hidden
-      />
+      <input type="file" id="folderUpload" webkitdirectory mozdirectory multiple hidden />
       <label for="folderUpload" class="btn-upload">Upload</label>
     </section>
     <!-- QRcode -->
@@ -48,7 +41,12 @@
         <div id="qrcode"></div>
         <div id="qrcode-download"></div>
       </div>
-      <input type="color" id="colorPicker" value="#000000" />
+      <div id="colorPickerContainer">
+        <div>
+          <input type="color" id="colorPickerDark" value="#000000" />
+          <input type="color" id="colorPickerLight" value="#ffffff" />
+        </div>
+      </div>
       <svg
         id="svg-download"
         aria-hidden="true"
