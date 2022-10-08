@@ -37,7 +37,7 @@
       <label for="folderUpload" class="btn-upload">Upload</label>
     </section>
     <!-- QRcode -->
-    <center>
+    <center style="position: relative">
       <div class="qrcode-container">
         <div class="loader-container">
           <div class="loader">
@@ -48,7 +48,12 @@
         <div id="qrcode"></div>
         <div id="qrcode-download"></div>
       </div>
-
+      <div id="colorPickerContainer">
+        <div>
+          <input type="color" id="colorPickerLight" value="#ffffff" />
+          <input type="color" id="colorPickerDark" value="#000000" />
+        </div>
+      </div>
       <svg
         id="svg-download"
         aria-hidden="true"
