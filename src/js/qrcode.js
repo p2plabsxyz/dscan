@@ -35,7 +35,9 @@ function showLoader() {
   $("section.flex-center > svg").css("aria-disabled", true);
   $("#qrcode").hide();
   $(".output-label + div").text("");
-  clearQRColor();
+  $("#colorPickerContainer").hide();
+  clearQRColor("colorDark", "#000000");
+  clearQRColor("colorLight", "#ffffff");
 }
 
 function showCopiedTooltip() {
@@ -72,8 +74,8 @@ function uploadCallback(cid, ipfsLink) {
   QR_CODE_DOWNLOAD.makeCode(ipfsLink);
   QR_CODE_DISPLAY.makeCode(ipfsLink);
   $("#qrcode").show();
-  // show #colorPicker
-  $("#colorPicker").show();
+  // show #colorPickerContainer
+  $("#colorPickerContainer").show();
   // Code to download qrcode
   $("#svg-download")
     .off()
@@ -115,14 +117,33 @@ function getProgressUpdater(files) {
   };
 }
 
-function clearQRColor() {
-  $("#colorPicker").val("#000000");
-  $("#colorPicker").hide();
-  QR_CODE_DISPLAY._htOption.colorDark = "#000000";
-  QR_CODE_DOWNLOAD._htOption.colorDark = "#000000";
-}
+/**
+ *
+ * @param {"colorDark" | "colorLight"} colorPropName
+ * @param {string} hexCode
+ * @returns
+ */
+function clearQRColor(colorPropName, hexCode) {
+  if (colorPropName === "colorDark") {
+    $(`#colorPickerDark`).val(hexCode);
+  } else {
+    $(`#colorPickerLight`).val(hexCode);
+  }
 
-function updateQRColor(hexCode = "#000000") {
+  try {
+    QR_CODE_DISPLAY._htOption[colorPropName] = hexCode;
+    QR_CODE_DOWNLOAD._htOption[colorPropName] = hexCode;
+  } catch (error) {
+    console.error("Exception while clearing colour. Error...", error);
+  }
+}
+/**
+ *
+ * @param {"colorDark" | "colorLight"} colorPropName
+ * @param {string} hexCode
+ * @returns
+ */
+function updateQRColor(colorPropName, hexCode = "#000000") {
   // do nothing if qrcode not visible
   if (!$("#qrcode>img").is(":visible")) return;
   const ipfsLink = document.getElementById("link").textContent;
@@ -132,8 +153,8 @@ function updateQRColor(hexCode = "#000000") {
   try {
     QR_CODE_DISPLAY.clear();
     QR_CODE_DOWNLOAD.clear();
-    QR_CODE_DISPLAY._htOption.colorDark = hexCode;
-    QR_CODE_DOWNLOAD._htOption.colorDark = hexCode;
+    QR_CODE_DISPLAY._htOption[colorPropName] = hexCode;
+    QR_CODE_DOWNLOAD._htOption[colorPropName] = hexCode;
     QR_CODE_DISPLAY.makeCode(ipfsLink);
     QR_CODE_DOWNLOAD.makeCode(ipfsLink);
   } catch (error) {
@@ -171,6 +192,10 @@ $("#folderUpload").on("change", async function () {
 QR_CODE_DISPLAY.clear();
 
 // on color change event
-$("#colorPicker").on("change", function (event) {
-  updateQRColor(event.target.value);
+$("#colorPickerDark").on("change", function (event) {
+  updateQRColor("colorDark", event.target.value);
+});
+
+$("#colorPickerLight").on("change", function (event) {
+  updateQRColor("colorLight", event.target.value);
 });
