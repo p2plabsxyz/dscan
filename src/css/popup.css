@@ -317,3 +317,15 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+/* color picker styling */
+#colorPicker {
+  display: none;
+  height: 25px;
+  width: 100px;
+  position: absolute;
+  right: 10%;
+  top: 60px;
+  rotate: 90deg;
+  transform: translateY(-50%);
+}

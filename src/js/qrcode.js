@@ -35,6 +35,7 @@ function showLoader() {
   $("section.flex-center > svg").css("aria-disabled", true);
   $("#qrcode").hide();
   $(".output-label + div").text("");
+  clearQRColor();
 }
 
 function showCopiedTooltip() {
@@ -71,6 +72,8 @@ function uploadCallback(cid, ipfsLink) {
   QR_CODE_DOWNLOAD.makeCode(ipfsLink);
   QR_CODE_DISPLAY.makeCode(ipfsLink);
   $("#qrcode").show();
+  // show #colorPicker
+  $("#colorPicker").show();
   // Code to download qrcode
   $("#svg-download")
     .off()
@@ -112,6 +115,32 @@ function getProgressUpdater(files) {
   };
 }
 
+function clearQRColor() {
+  $("#colorPicker").val("#000000");
+  $("#colorPicker").hide();
+  QR_CODE_DISPLAY._htOption.colorDark = "#000000";
+  QR_CODE_DOWNLOAD._htOption.colorDark = "#000000";
+}
+
+function updateQRColor(hexCode = "#000000") {
+  // do nothing if qrcode not visible
+  if (!$("#qrcode>img").is(":visible")) return;
+  const ipfsLink = document.getElementById("link").textContent;
+  // do nothing if ipfsLink is null or empty
+  if (ipfsLink === null || !ipfsLink?.length) return;
+  // clear, set the colour value and re-draw
+  try {
+    QR_CODE_DISPLAY.clear();
+    QR_CODE_DOWNLOAD.clear();
+    QR_CODE_DISPLAY._htOption.colorDark = hexCode;
+    QR_CODE_DOWNLOAD._htOption.colorDark = hexCode;
+    QR_CODE_DISPLAY.makeCode(ipfsLink);
+    QR_CODE_DOWNLOAD.makeCode(ipfsLink);
+  } catch (error) {
+    console.error("Exception while updating colour. Error...", error);
+  }
+}
+
 // Generate decentralized QR code from file
 $("#fileUpload").on("change", async function () {
   showLoader();
@@ -140,3 +169,8 @@ $("#folderUpload").on("change", async function () {
   });
 });
 QR_CODE_DISPLAY.clear();
+
+// on color change event
+$("#colorPicker").on("change", function (event) {
+  updateQRColor(event.target.value);
+});
