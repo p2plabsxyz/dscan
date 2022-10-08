@@ -324,8 +324,8 @@ body {
   height: 25px;
   width: 100px;
   position: absolute;
-  right: 10%;
+  right: 8%;
   top: 60px;
-  rotate: 90deg;
-  transform: translateY(-50%);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
 }
