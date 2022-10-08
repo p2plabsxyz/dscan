@@ -19,8 +19,15 @@ const body = document.querySelector('body');
 
 toggle.addEventListener('click', function(){
   this.classList.toggle('bi-moon');
-  document.body.style.background = '#222';  
-})
+  if(this.classList.toggle('bi-brightness-high-fill')){
+  document.documentElement.style.backgroundColor = 'white';  
+  document.body.style.backgroundColor = 'white'; 
+}
+else{
+  document.documentElement.style.backgroundColor = '#222';  
+  document.body.style.backgroundColor = '#222'; 
+}
+});
 
 var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);

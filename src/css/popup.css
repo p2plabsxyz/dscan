@@ -5,10 +5,16 @@ body {
   position: relative;
   font-family: arial;
   background-color: #f1f2f8;
-  /* background-color: #222; */
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+#dark-mode-btn{
+  position: absolute;
+  margin-top:18px; 
+  margin-left:18rem; 
+  color: azure;
+  cursor: pointer;
 }
 .center {
   text-align: center;
