@@ -61,6 +61,9 @@ h1 {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
+.file:hover {
+  color: darkslategrey;
+}
 @media (min-width: 768px) {
   .file {
     padding: 0.25em 0.75em;
@@ -86,6 +89,9 @@ h1 {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+.folder:hover {
+  color: darkslategrey;
 }
 @media (min-width: 768px) {
   .folder {
@@ -122,6 +128,9 @@ hr {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+}
+.btn-upload:hover {
+  color: #175859;
 }
 .btn-upload:active {
   box-shadow: 0px 0px 0px 0px;
