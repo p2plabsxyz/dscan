@@ -164,8 +164,10 @@ function updateQRColor(colorPropName, hexCode = "#000000") {
 
 // Generate decentralized QR code from file
 $("#fileUpload").on("change", async function () {
-  showLoader();
   var files = fileUpload.files;
+  if (files.length === 0) return;
+
+  showLoader();
   var cid = await client.put(files, {
     onStoredChunk: getProgressUpdater(files),
     wrapWithDirectory: false,
@@ -179,8 +181,10 @@ QR_CODE_DISPLAY.clear();
 
 // Generate decentralized QR code from folder
 $("#folderUpload").on("change", async function () {
-  showLoader();
   var files = folderUpload.files;
+  if (files.length === 0) return;
+
+  showLoader();
   var cid = await client.put(files, {
     onStoredChunk: getProgressUpdater(files),
   });
