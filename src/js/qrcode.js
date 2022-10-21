@@ -113,7 +113,7 @@ function getProgressUpdater(files) {
   return (bytes) => {
     uploadedBytes += bytes;
     var percent = totalBytes ? (100 * uploadedBytes) / totalBytes : 100;
-    updateProgress(percent);
+    updateProgress(Math.min(percent, 100));
   };
 }
 
