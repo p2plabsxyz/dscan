@@ -22,7 +22,9 @@ For more information, you can read this 📝 [blog post](https://dev.to/akhilesh
 
 ## 📺 Demo
 
-<img src="https://github.com/buidltools/dscan/blob/main/demo.gif" />
+<div align="center">
+  <img src="https://github.com/buidltools/dscan/blob/main/demo.gif" />
+</div>
 
 > In case of ⚠️ "504 Gateway Time-out" error, try again after some time. You can also use other [IPFS gateways](https://ipfs.github.io/public-gateway-checker/) with your CID.
 
