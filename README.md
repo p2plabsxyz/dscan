@@ -11,7 +11,7 @@
 </div><br>
 
 DScan is a decentralized storage and file sharing tool.
-DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS CID. Later you can share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
+DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS CID. Later you can customize and share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
 For more information, you can read this 📝 [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
 
 ## 💻 Extension
