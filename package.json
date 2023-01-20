@@ -1,7 +1,7 @@
 {
   "name": "dscan",
   "version": "3.1.0",
-  "description": "DScan is a chrome extension that uploads the content to IPFS and generates decentralized QR codes.",
+  "description": "An extension that uploads the content to IPFS and generates decentralized QR codes.",
   "main": "popup.jsx",
   "scripts": {
     "dev": "webpack --watch --config webpack.dev.js",
