@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- title -->
+    <title>DScan | Folder</title>
+  </head>
+  <body>
+    <!-- header -->
+    <section class="center">
+      <header>
+        <img src="./logo.png" class="logo" />
+        <h1>
+          D
+          <h1 style="color: white; margin-left: 0px">Scan</h1>
+        </h1>
+      </header>
+    </section>
+    <!-- pages -->
+    <section class="center pages">
+      <a class="file" href="file.html">File 📄</a>
+      <a class="folder active" href="">Folder 📁</a>
+    </section>
+    <hr />
+    <!-- input -->
+    <section class="center">
+      <input
+        type="file"
+        id="folderUpload"
+        webkitdirectory
+        mozdirectory
+        multiple
+        hidden
+      />
+      <label for="folderUpload" class="btn-upload">Upload</label>
+    </section>
+    <!-- QRcode -->
+    <center style="position: relative">
+      <div class="qrcode-container">
+        <div class="loader-container">
+          <div class="loader">
+            <div class="loader-progress"></div>
+            <div class="loader-spinner"></div>
+          </div>
+        </div>
+        <div id="qrcode"></div>
+        <div id="qrcode-download"></div>
+      </div>
+      <div id="colorPickerContainer">
+        <div>
+          <input type="color" id="colorPickerLight" value="#ffffff" />
+          <input type="color" id="colorPickerDark" value="#000000" />
+        </div>
+      </div>
+      <svg
+        id="svg-download"
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="download"
+        class="svg-inline--fa fa-download"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M480 352h-133.5l-45.25 45.25C289.2 409.3 273.1 416 256 416s-33.16-6.656-45.25-18.75L165.5 352H32c-17.67 0-32 14.33-32 32v96c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32v-96C512 366.3 497.7 352 480 352zM432 456c-13.2 0-24-10.8-24-24c0-13.2 10.8-24 24-24s24 10.8 24 24C456 445.2 445.2 456 432 456zM233.4 374.6C239.6 380.9 247.8 384 256 384s16.38-3.125 22.62-9.375l128-128c12.49-12.5 12.49-32.75 0-45.25c-12.5-12.5-32.76-12.5-45.25 0L288 274.8V32c0-17.67-14.33-32-32-32C238.3 0 224 14.33 224 32v242.8L150.6 201.4c-12.49-12.5-32.75-12.5-45.25 0c-12.49 12.5-12.49 32.75 0 45.25L233.4 374.6z"
+        ></path>
+      </svg>
+    </center>
+    <!-- output -->
+    <section class="center">
+      <label for="cid" class="output-label">CID: </label>
+      <div type="text" id="cid"></div>
+      <svg
+        id="svg-cid"
+        onclick="copyTextFromElement('cid')"
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="copy"
+        class="svg-inline--fa fa-copy"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M384 96L384 0h-112c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48H464c26.51 0 48-21.49 48-48V128h-95.1C398.4 128 384 113.6 384 96zM416 0v96h96L416 0zM192 352V128h-144c-26.51 0-48 21.49-48 48v288c0 26.51 21.49 48 48 48h192c26.51 0 48-21.49 48-48L288 416h-32C220.7 416 192 387.3 192 352z"
+        ></path>
+      </svg>
+      <div id="tooltip">
+        <div>COPIED</div>
+      </div>
+      <div id="tooltip-pointer"></div>
+    </section>
+    <section class="center">
+      <label for="link" class="output-label">URL: </label>
+      <div id="link"></div>
+      <svg
+        id="svg-link"
+        aria-hidden="true"
+        focusable="false"
+        data-prefix="fas"
+        data-icon="up-right-from-square"
+        class="svg-inline--fa fa-up-right-from-square"
+        role="img"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 512 512"
+      >
+        <path
+          fill="currentColor"
+          d="M384 320c-17.67 0-32 14.33-32 32v96H64V160h96c17.67 0 32-14.32 32-32s-14.33-32-32-32L64 96c-35.35 0-64 28.65-64 64V448c0 35.34 28.65 64 64 64h288c35.35 0 64-28.66 64-64v-96C416 334.3 401.7 320 384 320zM488 0H352c-12.94 0-24.62 7.797-29.56 19.75c-4.969 11.97-2.219 25.72 6.938 34.88L370.8 96L169.4 297.4c-12.5 12.5-12.5 32.75 0 45.25C175.6 348.9 183.8 352 192 352s16.38-3.125 22.62-9.375L416 141.3l41.38 41.38c9.156 9.141 22.88 11.84 34.88 6.938C504.2 184.6 512 172.9 512 160V24C512 10.74 501.3 0 488 0z"
+        ></path>
+      </svg>
+    </section>
+    <!-- branding -->
+    <p style="text-align: center; margin-top: 25px">
+      <a
+        style="
+          font-family: monospace;
+          color: black;
+          font-size: small;
+          border-bottom: 1px dotted black;
+          text-decoration: none;
+        "
+        href="https://p2plabs.xyz/"
+        target="_blank"
+        rel="noopener noreferrer"
+        >p2plabs.xyz</a
+      >
+    </p>
+  </body>
+</html>

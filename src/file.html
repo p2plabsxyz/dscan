@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- title -->
-    <title>DScan</title>
+    <title>DScan | File</title>
   </head>
   <body>
+    <div id="root"></div>
     <!-- header -->
     <section class="center">
       <header>
@@ -20,21 +21,14 @@
     </section>
     <!-- pages -->
     <section class="center pages">
-      <a class="file" href="popup.html">File 📄</a>
-      <a class="folder active" href="">Folder 📁</a>
+      <a class="file active" href="">File 📄</a>
+      <a class="folder" href="folder.html">Folder 📁</a>
     </section>
     <hr />
     <!-- input -->
     <section class="center">
-      <input
-        type="file"
-        id="folderUpload"
-        webkitdirectory
-        mozdirectory
-        multiple
-        hidden
-      />
-      <label for="folderUpload" class="btn-upload">Upload</label>
+      <input type="file" id="fileUpload" hidden />
+      <label for="fileUpload" class="btn-upload">Upload</label>
     </section>
     <!-- QRcode -->
     <center style="position: relative">
@@ -127,10 +121,10 @@
           border-bottom: 1px dotted black;
           text-decoration: none;
         "
-        href="https://buidltools.com/"
+        href="https://p2plabs.xyz/"
         target="_blank"
         rel="noopener noreferrer"
-        >buidltools.com</a
+        >p2plabs.xyz</a
       >
     </p>
   </body>

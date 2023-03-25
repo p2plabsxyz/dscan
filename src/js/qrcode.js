@@ -1,4 +1,3 @@
-import "../css/popup.css";
 import QRCode from "davidshimjs-qrcodejs";
 import $ from "jquery";
 import { Web3Storage } from "web3.storage";
@@ -19,8 +18,52 @@ var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
 
 // web3.storage API token
-const token = process.env.API_TOKEN;
-const client = new Web3Storage({ token });
+let savedKey;
+chrome.storage.local.get(["web3storageKey"], function (result) {
+  savedKey = result.web3storageKey;
+  const client = new Web3Storage({ token: savedKey });
+
+  // Generate decentralized QR code from file
+  $("#fileUpload").on("change", async function () {
+    var files = fileUpload.files;
+    if (files.length === 0) return;
+
+    showLoader();
+    var cid = await client.put(files, {
+      onStoredChunk: getProgressUpdater(files),
+      wrapWithDirectory: false,
+    });
+    if (!cid || cid.length === 0) {
+      alert("Invalid web3.storage key format. Please enter a valid key.");
+      return;
+    }
+    let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
+    hideLoader(function () {
+      uploadCallback(cid, ipfsLink);
+    });
+  });
+  QR_CODE_DISPLAY.clear();
+
+  // Generate decentralized QR code from folder
+  $("#folderUpload").on("change", async function () {
+    var files = folderUpload.files;
+    if (files.length === 0) return;
+
+    showLoader();
+    var cid = await client.put(files, {
+      onStoredChunk: getProgressUpdater(files),
+    });
+    if (!cid || cid.length === 0) {
+      alert("Invalid web3.storage key format. Please enter a valid key.");
+      return;
+    }
+    let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
+    hideLoader(function () {
+      uploadCallback(cid, ipfsLink);
+    });
+  });
+  QR_CODE_DISPLAY.clear();
+});
 let isTooltipVisible = false;
 
 function hideLoader(callback) {
@@ -161,39 +204,6 @@ function updateQRColor(colorPropName, hexCode = "#000000") {
     console.error("Exception while updating colour. Error...", error);
   }
 }
-
-// Generate decentralized QR code from file
-$("#fileUpload").on("change", async function () {
-  var files = fileUpload.files;
-  if (files.length === 0) return;
-
-  showLoader();
-  var cid = await client.put(files, {
-    onStoredChunk: getProgressUpdater(files),
-    wrapWithDirectory: false,
-  });
-  let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
-  hideLoader(function () {
-    uploadCallback(cid, ipfsLink);
-  });
-});
-QR_CODE_DISPLAY.clear();
-
-// Generate decentralized QR code from folder
-$("#folderUpload").on("change", async function () {
-  var files = folderUpload.files;
-  if (files.length === 0) return;
-
-  showLoader();
-  var cid = await client.put(files, {
-    onStoredChunk: getProgressUpdater(files),
-  });
-  let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
-  hideLoader(function () {
-    uploadCallback(cid, ipfsLink);
-  });
-});
-QR_CODE_DISPLAY.clear();
 
 // on color change event
 $("#colorPickerDark").on("change", function (event) {

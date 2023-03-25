@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const Dotenv = require('dotenv-webpack');
+const Dotenv = require("dotenv-webpack");
 
 var fileExtensions = [
   "jpg",
@@ -20,6 +20,8 @@ var fileExtensions = [
 module.exports = {
   entry: {
     qrcode: ["regenerator-runtime/runtime.js", "./src/js/qrcode.js"],
+    background: "./src/js/background.js",
+    index: "./src/Index.jsx",
   },
   output: {
     path: path.resolve(__dirname, "buidl"),
@@ -30,13 +32,12 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use:
-          {
-            loader: "babel-loader",
-            options: {
-              presets: ["@babel/preset-env", "@babel/preset-react"],
-            },
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: ["@babel/preset-env", "@babel/preset-react"],
           },
+        },
       },
       {
         test: /\.css$/,
@@ -58,15 +59,19 @@ module.exports = {
       filename: "popup.html",
     }),
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "src", "folderUpload.html"),
-      filename: "folderUpload.html",
+      template: path.join(__dirname, "src", "file.html"),
+      filename: "file.html",
+    }),
+    new HtmlWebpackPlugin({
+      template: path.join(__dirname, "src", "folder.html"),
+      filename: "folder.html",
     }),
     new MiniCssExtractPlugin(),
     new CopyPlugin({
       patterns: [{ from: "public" }],
     }),
     new Dotenv({
-			path: './.env'
-		}),
+      path: "./.env",
+    }),
   ],
 };
