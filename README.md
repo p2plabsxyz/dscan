@@ -5,13 +5,13 @@
 <h1 align="center">DScan</h1>
 
 <div align="center">
-    <img src="https://img.shields.io/github/v/release/buidltools/dscan?color=green&style=flat-square" alt="Release" />
+    <img src="https://img.shields.io/github/v/release/p2plabsxyz/dscan?color=green&style=flat-square" alt="Release" />
     <img src="https://img.shields.io/chrome-web-store/rating/idpfgkgogjjgklefnkjdpghkifbjenap?color=blue&label=chrome%20rating&style=flat-square" alt="Chrome web store rating" />
     <img src="https://img.shields.io/badge/license-MIT-silver.svg?style=flat-square" alt="License">
 </div><br>
 
 DScan is a decentralized storage and file sharing tool.
-DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and get a "decentralized QR code" with IPFS CID. Later you can customize and share the QR code or hosted gateway link with everyone for easy and decentralized file sharing.<br>
+DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and receive a "decentralized QR code" with IPFS CID. Later you can customize and share the QR code or hosted gateway link with everyone for easy and decentralized file sharing. Because of web3.storage, the content can be accessed over IPFS without the user installing and setting up a local instance of Kubo.<br>
 For more information, you can read this 📝 [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
 
 ## 💻 Extension
@@ -23,7 +23,7 @@ For more information, you can read this 📝 [blog post](https://dev.to/akhilesh
 ## 📺 Demo
 
 <div align="center">
-  <img src="https://github.com/buidltools/dscan/blob/main/demo.gif" />
+  <img src="https://github.com/p2plabsxyz/dscan/blob/main/demo.gif" />
 </div>
 
 > In case of ⚠️ "504 Gateway Time-out" error, try again after some time. You can also use other [IPFS gateways](https://ipfs.github.io/public-gateway-checker/) with your CID.
@@ -38,13 +38,10 @@ The extension's development code is placed in `/src` folder. manifest.json is in
 npm install
 ```
 
-For development and testing, you have to create your own web3.storage API token. To do that, `login to` [web3.storage](https://web3.storage/) -> `create a new API token` -> `copy the API token`.
-
-Then create a `.env` file in the root directory.
-
-```bash
-API_TOKEN=PASTE_YOUR_API_TOKEN
-```
+First, generate the web3.storage API key:
+* Go to [web3.storage](https://web3.storage/) and Sign In.
+* Click on Accounts and select Create an API Token.
+* Copy the API Token and paste it in the input field.
 
 2. After development of the extension, run the following command. This will create a `production` build.
 
@@ -58,8 +55,6 @@ npm run build
 
 5. Select `Load unpacked extension` and open the `buidl` folder.
 
-_After every change, run `npm run build` command and it will update `buidl` folder automatically, so you don't have to manualy upload the folder after every change._
-
 For more information, read the [Webpack docs](https://webpack.js.org/concepts/) and the [Chrome Extension docs](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
 
 ## 📄 Contribute
@@ -70,13 +65,13 @@ For more information, read the [Webpack docs](https://webpack.js.org/concepts/) 
 
 ### 🙏 Thanks to all contributors!
 
-<a href="https://github.com/buidltools/dscan/graphs/contributors">
+<a href="https://github.com/p2plabsxyz/dscan/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=buidltools/dscan" />
 </a>
 
 ## ⚖️ License
 
-DScan is licensed under the [MIT License](https://github.com/buidltools/dscan/blob/main/LICENSE).
+DScan is licensed under the [MIT License](https://github.com/p2plabsxyz/dscan/blob/main/LICENSE).
 
 <hr>
-Don't forget to leave a star ⭐️ ~ <a href="https://twitter.com/buidltools" target="_blank"><img src="https://img.shields.io/twitter/follow/buidltools?style=social" alt="twitter" /></a>
+Don't forget to leave a star ⭐️ ~ <a href="https://twitter.com/p2plabs_xyz" target="_blank"><img src="https://img.shields.io/twitter/follow/p2plabs_xyz?style=social" alt="twitter" /></a>
