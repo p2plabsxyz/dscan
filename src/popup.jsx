@@ -7,10 +7,22 @@ function Popup() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    if (!isValidWeb3StorageApiKey(web3storageKey)) {
+      alert("Invalid API key. Please enter a valid web3.storage API key.");
+      return;
+    }
+
     chrome.storage.local.set({ web3storageKey }, function () {
       chrome.runtime.sendMessage({ type: "keyUpdated", key: web3storageKey });
+      window.location.href = "file.html";
     });
   };
+
+  function isValidWeb3StorageApiKey(apiKey) {
+    const pattern = /^eyJ[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+\.[a-zA-Z0-9-_]+$/;
+    return pattern.test(apiKey);
+  }
 
   const handleRemoveKey = () => {
     chrome.storage.local.set({ web3storageKey: null });
@@ -20,6 +32,7 @@ function Popup() {
 
   const handleContinueWithSavedKey = () => {
     chrome.runtime.sendMessage({ type: "continueWithSavedKey", key: savedKey });
+    window.location.href = "file.html";
   };
 
   function formatKey(str) {
@@ -34,14 +47,6 @@ function Popup() {
   useEffect(() => {
     chrome.storage.local.get(["web3storageKey"], function (result) {
       setSavedKey(result.web3storageKey);
-    });
-  }, []);
-
-  useEffect(() => {
-    chrome.runtime.onMessage.addListener(function (message) {
-      if (message.type === "reloadPopup") {
-        window.location.href = "file.html";
-      }
     });
   }, []);
 
