@@ -23,6 +23,6 @@
 * Run `prettier` in each code file.
 
 ## Questions
-* Please reach out to us at info@buidltools.com.
+* Please reach out to us at contact@p2plabs.xyz.
 
 *Hope to see your username on our list of [contributors](https://github.com/buidltools/dscan/graphs/contributors) 🎉*
