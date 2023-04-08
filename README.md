@@ -22,6 +22,7 @@ For more information, you can read this 📝 [blog post](https://dev.to/akhilesh
 
 ## 🚧 What's next?
 
+- [ ] Implement uploads list viewing functionality.
 - [ ] "Add to ipfs" [context menu](https://developer.chrome.com/docs/extensions/reference/contextMenus/).
 - [ ] Options to [customize](https://github.com/kozakdenys/qr-code-styling) QR Code styles and add logos to QR Code.
 - [ ] [w3up](https://github.com/web3-storage/w3up-client) integration for self-sovereign identity and user-controllable keys.
