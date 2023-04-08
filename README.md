@@ -20,6 +20,13 @@ For more information, you can read this 📝 [blog post](https://dev.to/akhilesh
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Install from Chrome Store](https://ipfs.io/ipfs/QmU4Qm5YEKy5yHmdAgU2fD7PjZLgrYTUUbxTydqG2QK3TT)<br>![](https://img.shields.io/chrome-web-store/users/idpfgkgogjjgklefnkjdpghkifbjenap?label=Chrome%20Web%20Store%20users&style=social)](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)                                                                                                                                                                                    |
 
+## 🚧 What's next?
+
+- [ ] "Add to ipfs" [context menu](https://developer.chrome.com/docs/extensions/reference/contextMenus/).
+- [ ] Options to [customize](https://github.com/kozakdenys/qr-code-styling) QR Code styles and add logos to QR Code.
+- [ ] [w3up](https://github.com/web3-storage/w3up-client) integration for self-sovereign identity and user-controllable keys.
+- [ ] Build for Firefox.
+
 ## 📺 Demo
 
 <div align="center">
