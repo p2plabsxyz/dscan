@@ -26,18 +26,18 @@ chrome.storage.local.get(["web3storageKey"], function (result) {
   // Generate decentralized QR code from file
   $("#fileUpload").on("change", async function () {
     var files = fileUpload.files;
+    var name = files[0].name;
     if (files.length === 0) return;
 
     showLoader();
     var cid = await client.put(files, {
       onStoredChunk: getProgressUpdater(files),
-      wrapWithDirectory: false,
     });
     if (!cid || cid.length === 0) {
       alert("Invalid web3.storage key format. Please enter a valid key.");
       return;
     }
-    let ipfsLink = `https://w3s.link/ipfs/${cid}/`;
+    let ipfsLink = `https://w3s.link/ipfs/${cid}/${name}/`;
     hideLoader(function () {
       uploadCallback(cid, ipfsLink);
     });
