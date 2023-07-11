@@ -5,6 +5,7 @@
   "version": "3.2",
   "author": "P2P Labs",
   "homepage_url": "https://p2plabs.xyz/",
+  "keywords": ["dscan", "ipfs", "web3.storage", "qr code", "decentralization"],
   "permissions": ["storage"],
   "background": {
     "service_worker": "background.js"
