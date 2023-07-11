@@ -1,6 +1,6 @@
 {
   "name": "dscan",
-  "version": "3.2",
+  "version": "3.3",
   "description": "An extension that uploads the content to IPFS and generates decentralized QR codes",
   "keywords": [
     "dscan",
