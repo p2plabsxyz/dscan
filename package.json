@@ -1,8 +1,17 @@
 {
   "name": "dscan",
   "version": "3.2",
-  "description": "An extension that uploads the content to IPFS and generates decentralized QR codes.",
-  "author": "Akhilesh Thite",
+  "description": "An extension that uploads the content to IPFS and generates decentralized QR codes",
+  "keywords": [
+    "dscan",
+    "ipfs",
+    "web3.storage",
+    "qr code",
+    "decentralization"
+  ],
+  "license": "MIT",
+  "author": "Akhilesh Thite <akhileshthite@hotmail.com> (https://akhilesh.art/)",
+  "repository": "https://github.com/p2plabsxyz/dscan",
   "scripts": {
     "dev": "webpack --watch --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js"
