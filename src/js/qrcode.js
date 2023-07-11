@@ -50,9 +50,22 @@ chrome.storage.local.get(["web3storageKey"], function (result) {
     if (files.length === 0) return;
 
     showLoader();
-    var cid = await client.put(files, {
-      onStoredChunk: getProgressUpdater(files),
+    // Create a new array to store the file objects with updated webkitRelativePath
+    var updatedFiles = [];
+
+    // Traverse through each file in the files array
+    for (let i = 0; i < files.length; i++) {
+      const file = files[i];
+      const relativePath = file.webkitRelativePath;
+      const updatedFolder = new File([file], relativePath); // Create a new file object with updated webkitRelativePath
+      updatedFiles.push(updatedFolder); // Add the updated file object to the updatedFiles array
+    }
+
+    var cid = await client.put(updatedFiles, {
+      onStoredChunk: getProgressUpdater(updatedFiles),
+      wrapWithDirectory: false,
     });
+
     if (!cid || cid.length === 0) {
       alert("Invalid web3.storage key format. Please enter a valid key.");
       return;
