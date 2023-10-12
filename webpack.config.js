@@ -19,8 +19,8 @@ var fileExtensions = [
 
 module.exports = {
   entry: {
-    qrcode: ["regenerator-runtime/runtime.js", "./src/js/qrcode.js"],
-    background: "./src/js/background.js",
+    qrcode: ["regenerator-runtime/runtime.js", "./src/scripts/qrcode.js"],
+    background: "./src/scripts/background.js",
     index: "./src/Index.jsx",
   },
   output: {

@@ -3,7 +3,9 @@ import $ from "jquery";
 import { Web3Storage } from "web3.storage";
 import "regenerator-runtime/runtime";
 
-// QR code js library
+/*
+ ** QR code **
+ */
 const createQRCodeFor = (identifier, dimension) => {
   return new QRCode(identifier, {
     width: dimension,
@@ -17,7 +19,9 @@ const createQRCodeFor = (identifier, dimension) => {
 var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
 var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
 
-// web3.storage API token
+/*
+ ** Web3.storage API **
+ */
 let savedKey;
 chrome.storage.local.get(["web3storageKey"], function (result) {
   savedKey = result.web3storageKey;
@@ -77,6 +81,10 @@ chrome.storage.local.get(["web3storageKey"], function (result) {
   });
   QR_CODE_DISPLAY.clear();
 });
+
+/*
+ ** Utils **
+ */
 let isTooltipVisible = false;
 
 function hideLoader(callback) {

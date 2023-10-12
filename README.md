@@ -1,5 +1,5 @@
 <p align="center">
-    <img align="center" src="/src/img/logo.png" width="150" height="150"></img>
+    <img align="center" src="/src/assets/logo.png" width="150" height="150"></img>
 </p>
 
 <h1 align="center">DScan</h1>
