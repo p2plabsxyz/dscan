@@ -59,6 +59,12 @@ npm run build
 
 For more information, read the [Webpack docs](https://webpack.js.org/concepts/) and the [Chrome Extension docs](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
 
+## 💫 Achievements
+
+- Listed on [awesome ipfs](https://awesome.ipfs.tech/#tools)
+- IPFS Community Impact Awards Q2’23 recipient
+- 2nd prize winner at MARS Asia hackathon 2021
+
 ## 📄 Contribute
 
 - Thanks for your interest in contributing to DScan. There are many ways you can contribute to the project.
