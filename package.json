@@ -14,7 +14,8 @@
   "repository": "https://github.com/p2plabsxyz/dscan",
   "scripts": {
     "dev": "webpack --watch --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js",
+    "buildFF": "webpack --config webpack.prodFF.js"
   },
   "dependencies": {
     "buffer": "^6.0.3",

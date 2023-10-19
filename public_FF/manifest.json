@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "DScan: Decentralized QR Code Generator",
+  "description": "An extension that uploads the content to IPFS and generates decentralized QR codes.",
+  "version": "3.3",
+  "author": "P2P Labs",
+  "homepage_url": "https://p2plabs.xyz/",
+  "permissions": ["storage"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "./logo.png"
+  }
+}
