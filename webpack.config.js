@@ -19,9 +19,9 @@ var fileExtensions = [
 
 module.exports = {
   entry: {
-    qrcode: ["regenerator-runtime/runtime.js", "./src/scripts/qrcode.js"],
     background: "./src/scripts/background.js",
     index: "./src/Index.jsx",
+    web3Storage: ["regenerator-runtime/runtime.js", "./src/scripts/web3Storage.js"],
   },
   output: {
     path: path.resolve(__dirname, "buidl"),
