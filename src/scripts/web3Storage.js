@@ -28,7 +28,6 @@ chrome.storage.local.get(["web3storageKey"], function (result) {
             uploadCallback(cid, ipfsLink);
         });
     });
-    QR_CODE_DISPLAY.clear();
 
     // Generate decentralized QR code from folder
     $("#folderUpload").on("change", async function () {
@@ -61,5 +60,4 @@ chrome.storage.local.get(["web3storageKey"], function (result) {
             uploadCallback(cid, ipfsLink);
         });
     });
-    QR_CODE_DISPLAY.clear();
 });
