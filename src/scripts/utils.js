@@ -17,6 +17,8 @@ export function showLoader() {
     $("#qrcode").hide();
     $(".output-label + div").text("");
     $("#colorPickerContainer").hide();
+    $("#stylePickerContainer").hide();
+    $("#logoPickerContainer").hide();
     clearQRColor("colorDark", "#000000");
     clearQRColor("colorLight", "#ffffff");
 }
@@ -196,18 +198,23 @@ function updateQRStyle(selectedStyle = 'classy') {
     }
 }
 // on dot style change event
-$("#qrStyle").on("change", function (event) {
-    const selectedStyle = event.target.value;
-    updateQRStyle(selectedStyle);
+$("#svg-style").on("click", function () {
+    $("#styleOptions").toggle();
 });
 
+// Handle style option selection
+$("#styleOptions input[type='radio']").on("change", function () {
+    const selectedStyle = $(this).val();
+    $("#styleOptions").hide();
+    updateQRStyle(selectedStyle);
+});
 
 /**
  *
  * @param {string} selectedLogo
  * @returns
  */
-function updateQRLogo(selectedLogo = 'https://raw.githubusercontent.com/p2plabsxyz/dscan/main/public/logo.png') {
+function updateQRLogo(selectedLogo = './logo.png') {
     // do nothing if qrcode not visible
     if (!$("#qrcode>canvas").is(":visible")) return;
     const ipfsLink = document.getElementById("link").textContent;
@@ -232,7 +239,7 @@ function updateQRLogo(selectedLogo = 'https://raw.githubusercontent.com/p2plabsx
 }
 
 // on logo change
-$("#uploadLogoButton").on("click", function () {
+$("#svg-logo").on("click", function () {
     $("#logoInput").trigger("click");
 });
 

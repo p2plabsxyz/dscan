@@ -19,7 +19,6 @@
   "dependencies": {
     "buffer": "^6.0.3",
     "css-loader": "^6.8.1",
-    "davidshimjs-qrcodejs": "0.0.2",
     "file-loader": "^6.2.0",
     "fs-extra": "^10.1.0",
     "jquery": "^3.7.0",

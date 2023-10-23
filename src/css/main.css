@@ -385,16 +385,59 @@ body {
   margin-right: 35px;
 }
 
-#stylePickerContainer {
-  display: none;
-  position: absolute;
-  left: 0;
-  top: 80px;
-}
-
 #logoPickerContainer {
   display: none;
   position: absolute;
-  left: 0;
-  top: 40px;
+  left: 55px;
+  top: 0px;
+  margin-bottom: 15px;
+}
+
+#stylePickerContainer {
+  display: none;
+  position: absolute;
+  left: 55px;
+  top: 65px;
+}
+
+#svg-logo,
+#svg-style {
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #c3c0c0;
+  color: #326d6e;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  -webkit-box-shadow: 0 2px 6px -6px #222;
+  -moz-box-shadow: 0 2px 6px -6px #222;
+  box-shadow: 0 2px 6px -6px #222;
+}
+
+#styleOptions {
+  display: none;
+  /* Initially hide the style options */
+  position: absolute;
+  width: 120px;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 2px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#styleOptions label {
+  display: block;
+  margin: 5px 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+#styleOptions input[type="radio"] {
+  margin-right: 5px;
+}
+
+#styleOptions label:hover {
+  background: #f0f0f0;
 }

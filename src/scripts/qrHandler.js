@@ -6,7 +6,7 @@ const createQRCodeFor = (dimension) => {
         height: dimension,
         type: "canvas",
         data: cid,
-        image: "https://raw.githubusercontent.com/p2plabsxyz/dscan/main/public/logo.png", // default
+        image: "./logo.png", // default
         dotsOptions: {
             color: "#000000", // default
             type: "rounded"
