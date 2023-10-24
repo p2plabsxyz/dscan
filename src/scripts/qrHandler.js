@@ -1,14 +1,26 @@
-import QRCode from "davidshimjs-qrcodejs";
+import QRCodeStyling from "qr-code-styling";
 
-const createQRCodeFor = (identifier, dimension) => {
-    return new QRCode(identifier, {
+const createQRCodeFor = (dimension) => {
+    const qrCode = new QRCodeStyling({
         width: dimension,
         height: dimension,
-        colorDark: "#000000",
-        colorLight: "#ffffff",
-        correctLevel: QRCode.CorrectLevel.L,
+        type: "canvas",
+        data: cid,
+        image: "./logo.png", // default
+        dotsOptions: {
+            color: "#000000", // default
+            type: "rounded"
+        },
+        backgroundOptions: {
+            colorLight: "#ffffff", // default
+        },
+        imageOptions: {
+            crossOrigin: "anonymous",
+            margin: 2
+        }
     });
+    return qrCode;
 };
 
-export var QR_CODE_DOWNLOAD = createQRCodeFor("qrcode-download", 400);
-export var QR_CODE_DISPLAY = createQRCodeFor("qrcode", 150);
+export var QR_CODE_DOWNLOAD = createQRCodeFor(400);
+export var QR_CODE_DISPLAY = createQRCodeFor(150);
