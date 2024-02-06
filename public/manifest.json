@@ -6,9 +6,6 @@
   "author": "P2P Labs",
   "homepage_url": "https://p2plabs.xyz/",
   "permissions": ["storage", "tabs", "activeTab", "scripting"],
-  "background": {
-    "service_worker": "background.js"
-  },
   "icons": {
     "16": "logo16.png",
     "32": "logo32.png",
