@@ -14,17 +14,17 @@ DScan enables you to quickly upload files and folders to [IPFS](https://ipfs.tec
 
 DScan, leveraging the [w3up-client](https://blog.web3.storage/posts/the-data-layer-is-here-with-the-new-web3-storage), incorporates [DIDs](https://www.w3.org/TR/did-core/) and [UCAN](https://ucan.xyz/) to establish a robust framework for decentralized authentication and authorization. The use of DIDs enhances security and promotes digital self-sovereignty, while UCAN facilitates permissioned access and the delegation of capabilities, enabling users to manage access to their content securely.
 
-Additionally, thanks to web3.storage, the content can be accessed over IPFS without the user installing and setting up a local instance of Kubo.
+Thanks to web3.storage, the content can be accessed over IPFS without the user installing and setting up a local instance of Kubo.
+
+<div align="center">
+  <img src="https://github.com/p2plabsxyz/dscan/blob/main/demo.png" />
+</div>
 
 ## 💻 Extension
 
 | <img src="https://unpkg.com/@browser-logos/chrome/chrome_16x16.png" width="16" height="16"> [Chrome](https://www.google.com/chrome/) \| <img src="https://unpkg.com/@browser-logos/brave/brave_16x16.png" width="16" height="16"> [Brave](https://brave.com/) \| <img src="https://unpkg.com/@browser-logos/opera/opera_16x16.png" width="16" height="16"> [Opera](https://www.opera.com/) \| <img src="https://unpkg.com/@browser-logos/edge/edge_16x16.png" width="16" height="16"> [Edge](https://www.microsoftedgeinsider.com/) |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Install from Chrome Store](https://ipfs.io/ipfs/QmU4Qm5YEKy5yHmdAgU2fD7PjZLgrYTUUbxTydqG2QK3TT)<br>![](https://img.shields.io/chrome-web-store/users/idpfgkgogjjgklefnkjdpghkifbjenap?label=Chrome%20Web%20Store%20users&style=social)](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)                                                                                                                                                                                    |
-
-<!-- <div align="center">
-  <img src="https://github.com/p2plabsxyz/dscan/blob/main/demo.gif" />
-</div> -->
 
 ## 🛠 Development
 
