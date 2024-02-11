@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "DScan",
+  "name": "DScan: Own Your Identity, Own Your Data",
   "description": "A decentralized storage and file-sharing tool that uploads content to IPFS and generates decentralized QR codes.",
   "version": "4.0",
   "author": "P2P Labs",
