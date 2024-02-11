@@ -212,7 +212,7 @@ function Popup() {
         {isAuthenticated ? (
           <div>
             <p style={{ textAlign: "center" }}>
-              Your current space is {spaceName}
+              Your current space is <b>{spaceName}</b>
               <span className="saved-key">{formatKey(spaceDID)}</span>
             </p>
             <button className="remove-btn" onClick={handleRemoveSpace}>
@@ -270,7 +270,7 @@ function Popup() {
                 </div>
               </div>
             )}
-            {isCreatingSpace ? <p>Creating..</p> : ""}
+            {isCreatingSpace ? <p>creating...</p> : ""}
           </div>
         ) : isLoginProcessStarted ? (
           <div>
@@ -280,12 +280,12 @@ function Popup() {
             </p>
             <br />
             <p style={{ fontSize: "small", color: "red" }}>
-              Do not close this window until you've verified your email.
+              DO NOT close this window until you've verified your email.
             </p>
           </div>
         ) : (
           <div>
-            <p>Log in/Sign up with your email 🔐</p>
+            <p>Log in / Sign up with your email 🔐</p>
             <form onSubmit={handleEmailSubmit}>
               <input
                 id="email"
@@ -303,11 +303,11 @@ function Popup() {
                   <code>What's new in DScan v4.0?</code>
                 </p>
                 <code>
-                  <li>- User-owned storage</li>
+                  <li>- Self-sovereign identity</li>
                 </code>
                 <br />
                 <code>
-                  <li>- Self-sovereign identity</li>
+                  <li>- User-owned storage</li>
                 </code>
                 <br />
                 <code>
@@ -334,7 +334,7 @@ function Popup() {
               <br />
               <center>
                 <p>
-                  <code>Decentralized storage and sharing made easy!</code>
+                  <code>Own your identity, own your data!</code>
                 </p>
               </center>
             </div>
