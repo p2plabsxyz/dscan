@@ -10,10 +10,11 @@
     <img src="https://img.shields.io/badge/license-MIT-silver.svg?style=flat-square" alt="License">
 </div><br>
 
-DScan is a decentralized storage and file sharing tool.
-DScan allows you to quickly upload files as well as folders to [IPFS](https://ipfs.io/) by using [web3.storage](https://web3.storage/about/) and receive a "decentralized QR code" with IPFS CID. Later you can customize and share the QR code or hosted gateway link with everyone for easy and decentralized file sharing. Because of web3.storage, the content can be accessed over IPFS without the user installing and setting up a local instance of Kubo.<br>
+DScan enables you to quickly upload files and folders to [IPFS](https://ipfs.tech/) using [web3.storage](https://web3.storage/), and provides a "decentralized QR code" containing the IPFS CID. This QR code can later be customized and shared with anyone for easy and decentralized file sharing. Users can visit [console.web3.storage](https://console.web3.storage/) and log in to manage their accounts.
 
-For more information, you can read this 📝 [blog post](https://dev.to/akhileshthite/dscan-decentralized-qr-code-generator-use-web3-for-file-sharing-2lp8). If you have any queries, then follow this [discussion thread](https://github.com/filecoin-project/community/discussions/410).
+DScan, leveraging the [w3up-client](https://blog.web3.storage/posts/the-data-layer-is-here-with-the-new-web3-storage), incorporates [DIDs](https://www.w3.org/TR/did-core/) and [UCAN](https://ucan.xyz/) to establish a robust framework for decentralized authentication and authorization. The use of DIDs enhances security and promotes digital self-sovereignty, while UCAN facilitates permissioned access and the delegation of capabilities, enabling users to manage access to their content securely.
+
+Additionally, thanks to web3.storage, the content can be accessed over IPFS without the user installing and setting up a local instance of Kubo.
 
 ## 💻 Extension
 
@@ -21,13 +22,9 @@ For more information, you can read this 📝 [blog post](https://dev.to/akhilesh
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [![Install from Chrome Store](https://ipfs.io/ipfs/QmU4Qm5YEKy5yHmdAgU2fD7PjZLgrYTUUbxTydqG2QK3TT)<br>![](https://img.shields.io/chrome-web-store/users/idpfgkgogjjgklefnkjdpghkifbjenap?label=Chrome%20Web%20Store%20users&style=social)](https://chrome.google.com/webstore/detail/dscan-decentralized-qr-co/idpfgkgogjjgklefnkjdpghkifbjenap)                                                                                                                                                                                    |
 
-## 📺 Demo
-
-<div align="center">
+<!-- <div align="center">
   <img src="https://github.com/p2plabsxyz/dscan/blob/main/demo.gif" />
-</div>
-
-> In case of ⚠️ "504 Gateway Time-out" error, try again after some time. You can also use other [IPFS gateways](https://ipfs.github.io/public-gateway-checker/) with your CID.
+</div> -->
 
 ## 🛠 Development
 
@@ -38,12 +35,6 @@ The extension's development code is placed in `/src` folder. manifest.json is in
 ```bash
 npm install
 ```
-
-First, generate the web3.storage API key:
-
-- Go to [web3.storage](https://web3.storage/) and Sign In.
-- Click on Accounts and select Create an API Token.
-- Copy the API Token and paste it in the input field.
 
 2. After development of the extension, run the following command. This will create a `production` build.
 
@@ -57,7 +48,7 @@ npm run build
 
 5. Select `Load unpacked extension` and open the `buidl` folder.
 
-For more information, read the [Webpack docs](https://webpack.js.org/concepts/) and the [Chrome Extension docs](https://developer.chrome.com/docs/extensions/mv3/getstarted/).
+For more information, read the [web3.storage docs](https://web3.storage/docs/).
 
 ## 💫 Achievements
 
