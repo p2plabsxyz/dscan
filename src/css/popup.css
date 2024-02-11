@@ -44,13 +44,13 @@ form {
   margin-top: 40px;
   align-items: center;
 }
-#key {
+#email {
   display: inline-flex;
   background-color: white;
   padding-left: 5px;
   padding-right: 5px;
-  width: 210px;
-  height: 28px;
+  width: 200px;
+  height: 26px;
   margin-right: 10px;
   font-size: 14px;
   border: 1px solid #c3c0c0;
@@ -64,16 +64,44 @@ form {
   -webkit-user-select: text;
   touch-action: manipulation;
 }
-#key:hover {
+#email:hover {
   border-color: #cccdcd;
 }
-#key::placeholder {
+#email::placeholder {
+  opacity: 0.8;
+}
+
+#spaceName {
+  display: inline-flex;
+  background-color: white;
+  padding-left: 5px;
+  padding-right: 5px;
+  width: 180px;
+  height: 26px;
+  margin-right: 10px;
+  font-size: 14px;
+  border: 1px solid #c3c0c0;
+  border-radius: 3px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+  align-items: left;
+  box-shadow: rgba(27, 31, 35, 0.1) 0 1px 0;
+  user-select: text;
+  -webkit-user-select: text;
+  touch-action: manipulation;
+}
+#spaceName:hover {
+  border-color: #cccdcd;
+}
+#spaceName::placeholder {
   opacity: 0.8;
 }
 
 .saved-key {
-  margin-top: 5px;
+  margin-top: 6px;
   color: #22c55e;
+  display: inline-block;
 }
 
 .instructions {
@@ -87,8 +115,13 @@ form {
   border-bottom: 1px dotted #3b82f6;
   text-decoration: none;
 }
+.w3console {
+  margin-left: 30px;
+  margin-right: 30px;
+}
 
-.save-btn {
+.space-btn,
+.login-btn {
   appearance: none;
   background-color: #22c55e;
   border: 1px solid rgba(27, 31, 35, 0.15);
@@ -102,7 +135,7 @@ form {
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
   font-size: 14px;
   font-weight: 600;
-  line-height: 20px;
+  line-height: 18px;
   padding: 5px 16px;
   position: relative;
   text-align: center;
@@ -113,7 +146,8 @@ form {
   vertical-align: middle;
   white-space: nowrap;
 }
-.save-btn:hover {
+.space-btn,
+.login-btn:hover {
   background-color: #059669;
 }
 
@@ -174,6 +208,25 @@ form {
 }
 .continue-btn:hover {
   background-color: #2563eb;
+}
+
+.billing {
+  margin-top: 30px;
+}
+.payment-warning {
+  margin-top: 30px;
+  color: #ef4444;
+}
+.paywall-msg {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-size: small;
+  text-align: left;
+  opacity: 0.8;
+}
+ul {
+  list-style-type: none;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */

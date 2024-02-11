@@ -19,7 +19,6 @@ var fileExtensions = [
 
 module.exports = {
   entry: {
-    background: "./src/scripts/background.js",
     index: "./src/Index.jsx",
     web3Storage: ["regenerator-runtime/runtime.js", "./src/scripts/web3Storage.js"],
   },

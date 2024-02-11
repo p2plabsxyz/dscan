@@ -1,7 +1,7 @@
 {
   "name": "dscan",
-  "version": "3.3",
-  "description": "An extension that uploads the content to IPFS and generates decentralized QR codes",
+  "version": "4.0",
+  "description": "A decentralized storage and file-sharing tool that uploads content to IPFS and generates decentralized QR codes.",
   "keywords": [
     "dscan",
     "ipfs",
@@ -17,6 +17,7 @@
     "build": "webpack --config webpack.prod.js"
   },
   "dependencies": {
+    "@web3-storage/w3up-client": "^12.1.0",
     "buffer": "^6.0.3",
     "css-loader": "^6.8.1",
     "file-loader": "^6.2.0",
@@ -25,8 +26,7 @@
     "qr-code-styling": "^1.6.0-rc.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "style-loader": "^3.3.3",
-    "web3.storage": "^4.5.4"
+    "style-loader": "^3.3.3"
   },
   "devDependencies": {
     "@babel/core": "^7.22.8",
